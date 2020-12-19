@@ -1,5 +1,5 @@
 
- @extends('template.master')
+ @extends('customer.template.master')
  @section('content')
   <!-- slider Area Start-->
   <div class="slider-area ">

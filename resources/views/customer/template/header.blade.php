@@ -68,6 +68,11 @@
                                         </div>
                                     </div>
                                 </li>
+                                <!-- <li class=" d-none d-xl-block">
+                                        <div class="favorit-items">
+                                            <i class="far fa-heart"></i>
+                                        </div>
+                                    </li> -->
                                 <li>
                                     <div class="shopping-card">
                                         <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>

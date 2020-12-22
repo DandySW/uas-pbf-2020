@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 
-@include('template.header')
+@include('customer/template.header')
 
 <body>
 
-@include('template.navbar')
-
     @yield('content')
 
-@include('template.footer')
+    @include('customer/template.footer')
 
-@include('template.script')
+    @include('customer/template.script')
 
 </body>
+
 </html>

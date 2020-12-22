@@ -5,20 +5,20 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/customer/img/icon.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="customer/img/icon.png">
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="{{asset('assets/customer/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/customer/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/customer/css/flaticon.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/customer/css/slicknav.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/customer/css/animate.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/customer/css/magnific-popup.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/customer/css/fontawesome-all.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/customer/css/themify-icons.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/customer/css/slick.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/customer/css/nice-select.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/customer/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('customer/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('customer/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('customer/css/flaticon.css')}}">
+    <link rel="stylesheet" href="{{asset('customer/css/slicknav.css')}}">
+    <link rel="stylesheet" href="{{asset('customer/css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{asset('customer/css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{asset('customer/css/fontawesome-all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('customer/css/themify-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('customer/css/slick.css')}}">
+    <link rel="stylesheet" href="{{asset('customer/css/nice-select.css')}}">
+    <link rel="stylesheet" href="{{asset('customer/css/style.css')}}">
 </head>
 
 <div id="preloader-active">
@@ -26,7 +26,7 @@
         <div class="preloader-inner position-relative">
             <div class="preloader-circle"></div>
             <div class="preloader-img pere-text">
-                <img src="assets/customer/img/LOGO KSHOP.png" alt="">
+                <img src="customer/img/LOGO KSHOP.png" alt="">
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@
                         <!-- Logo -->
                         <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
                             <div class="logo">
-                                <a href="index.html"><img src="assets/customer/img/LOGO KSHOP.png" alt="" height="110"
+                                <a href="index.html"><img src="customer/img/LOGO KSHOP.png" alt="" height="110"
                                         width="130"></a>
                             </div>
                         </div>

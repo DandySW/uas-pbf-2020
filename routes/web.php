@@ -15,3 +15,7 @@ Route::get('/', function () {
 
     return view('customer.index');
 });
+Route::get('/admin/a', function () {
+
+    return view('admin.index');
+});

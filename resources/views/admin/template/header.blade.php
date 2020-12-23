@@ -40,10 +40,10 @@
         <div class="nav-header">
             {{-- <div class="brand-logo"> --}}
                 <a href="index.html">
-                    <span class="logo-abbr"><img src="{{asset('admin/images/logo-k.t.png')}}"  width="60" height="30" alt=""> </span>
-                    <span class="logo-compact"><img src="{{asset('admin/images/logo.png')}}" width="100" height="90" alt=""></span>
+                    {{-- <span class="logo-compact"><img src="{{asset('admin/images/logo-k.t.png')}}"  width="40" height="30" alt=""> </span> --}}
+                    {{-- <span class="logo-compact"><img src="{{asset('admin/images/logo.png')}}" width="100" height="90" alt=""></span> --}}
                     <span class="brand-title">
-                        <img src="{{asset('admin/images/logo-kshop.png')}}" width="200" height="150" alt="">
+                        <img src="{{asset('admin/images/logo-kshop.png')}}" width="200" height="100" alt="">
                     </span>
                 </a>
             {{-- </div> --}}

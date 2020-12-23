@@ -11,8 +11,22 @@
 |
 */
 
-Route::get('/', function () {return view('customer.index');});
-Route::get('/admin/dashboard', function () {return view('admin.index');});
-Route::get('/admin/view', function () {return view('admin.view_customer');});
-Route::get('/admin/kategori', function () {return view('admin.kategori.view_kategori');});
-Route::get('/admin/produk', function () {return view('admin.produk.view_produk');});
+Route::get('/', function () {
+    return view('customer.index');
+});
+Route::get('/elements', function () {
+    return view('customer.elements');
+});
+
+Route::get('/admin/dashboard', function () {
+    return view('admin.index');
+});
+Route::get('/admin/view', function () {
+    return view('admin.view_customer');
+});
+Route::get('/admin/kategori', function () {
+    return view('admin.kategori.view_kategori');
+});
+Route::get('/admin/produk', function () {
+    return view('admin.produk.view_produk');
+});

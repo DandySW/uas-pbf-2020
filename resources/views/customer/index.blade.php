@@ -4,12 +4,12 @@
 <div class="slider-area ">
     <!-- Mobile Menu -->
     <div class="slider-active">
-        <div class="single-slider slider-height" data-background="assets/customer/img/hero/h1_hero.jpg">
+        <div class="single-slider slider-height" data-background="{{ asset('customer/img/hero/h1_hero.jpg') }}">
             <div class="container">
                 <div class="row d-flex align-items-center justify-content-between">
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-none d-md-block">
                         <div class="hero__img" data-animation="bounceIn" data-delay=".4s">
-                            <img src="assets/customer/img/hero/bp2.png" alt="">
+                            <img src="{{ asset('customer/img/hero/bp2.png') }}" alt="">
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-5 col-md-5 col-sm-8">
@@ -54,7 +54,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-product mb-60">
                             <div class="product-img">
-                                <img src="assets/customer/img/categori/product1.png" alt="">
+                                <img src="{{ asset('customer/img/categori/product1.png') }}" alt="">
                             </div>
                             <div class="product-caption">
                                 <h4><a href="#">Green Dress with details</a></h4>
@@ -69,7 +69,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-product mb-60">
                             <div class="product-img">
-                                <img src="assets/customer/img/categori/product2.png" alt="">
+                                <img src="{{ asset('customer/img/categori/product2.png') }}" alt="">
                             </div>
                             <div class="product-caption">
                                 <h4><a href="#">Green Dress with details</a></h4>
@@ -84,7 +84,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-product mb-60">
                             <div class="product-img">
-                                <img src="assets/customer/img/categori/product3.png" alt="">
+                                <img src="{{ asset('customer/img/categori/product3.png') }}" alt="">
                             </div>
                             <div class="product-caption">
                                 <h4><a href="#">Green Dress with details</a></h4>
@@ -99,7 +99,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-product mb-60">
                             <div class="product-img">
-                                <img src="assets/customer/img/categori/product4.png" alt="">
+                                <img src="{{ asset('customer/img/categori/product4.png') }}" alt="">
                             </div>
                             <div class="product-caption">
                                 <h4><a href="#">Green Dress with details</a></h4>
@@ -114,7 +114,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-product mb-60">
                             <div class="product-img">
-                                <img src="assets/customer/img/categori/product5.png" alt="">
+                                <img src="{{ asset('customer/img/categori/product5.png') }}" alt="">
                             </div>
                             <div class="product-caption">
                                 <h4><a href="#">Green Dress with details</a></h4>
@@ -129,7 +129,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-product mb-60">
                             <div class="product-img">
-                                <img src="assets/customer/img/categori/product6.png" alt="">
+                                <img src="{{ asset('customer/img/categori/product6.png') }}" alt="">
                             </div>
                             <div class="product-caption">
                                 <h4><a href="#">Green Dress with details</a></h4>
@@ -178,29 +178,4 @@
     </div>
 </div>
 <!-- Shop Method End-->
-<!-- Gallery Start-->
-<!-- <div class="gallery-wrapper lf-padding">
-            <div class="gallery-area">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="gallery-items">
-                            <img src="assets/customer/img/gallery/gallery1.jpg" alt="">
-                        </div>
-                        <div class="gallery-items">
-                            <img src="assets/customer/img/gallery/gallery2.jpg" alt="">
-                        </div>
-                        <div class="gallery-items">
-                            <img src="assets/customer/img/gallery/gallery3.jpg" alt="">
-                        </div>
-                        <div class="gallery-items">
-                            <img src="assets/customer/img/gallery/gallery4.jpg" alt="">
-                        </div>
-                        <div class="gallery-items">
-                            <img src="assets/customer/img/gallery/gallery5.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-<!-- Gallery End-->
 @endsection

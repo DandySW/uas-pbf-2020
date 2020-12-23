@@ -5,7 +5,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="customer/img/icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('customer/img/icon.png')}}">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="{{asset('customer/css/bootstrap.min.css')}}">
@@ -21,12 +21,13 @@
     <link rel="stylesheet" href="{{asset('customer/css/style.css')}}">
 </head>
 
+<!-- Loading animation -->
 <div id="preloader-active">
     <div class="preloader d-flex align-items-center justify-content-center">
         <div class="preloader-inner position-relative">
             <div class="preloader-circle"></div>
             <div class="preloader-img pere-text">
-                <img src="customer/img/LOGO KSHOP.png" alt="">
+                <img src="{{ asset('customer/img/LOGO KSHOP.png') }}" alt="logo kshop">
             </div>
         </div>
     </div>
@@ -41,8 +42,8 @@
                         <!-- Logo -->
                         <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
                             <div class="logo">
-                                <a href="index.html"><img src="customer/img/LOGO KSHOP.png" alt="" height="110"
-                                        width="130"></a>
+                                <a href="#"><img src="{{ asset('customer/img/LOGO KSHOP.png') }}" alt="logo kshop"
+                                        height="110" width="130"></a>
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-8 col-md-7 col-sm-5">
@@ -50,10 +51,10 @@
                             <div class="main-menu f-right d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="Catagori.html">Catagori</a></li>
-                                        <li><a href="product_list.html">Product List</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">Catagori</a></li>
+                                        <li><a href="#">Product List</a></li>
+                                        <li><a href="#">Contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -70,7 +71,7 @@
                                 </li>
                                 <li>
                                     <div class="shopping-card">
-                                        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
                                     </div>
                                 </li>
                                 <li class="d-none d-lg-block"> <a href="#" class="btn header-btn">Sign in</a></li>

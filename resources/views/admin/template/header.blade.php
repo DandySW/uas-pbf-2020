@@ -2,9 +2,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Kshop Admin Dashboard</title>
+    <title>KOREA SHOP TOWN-Admin</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="admin/admin/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('admin/images/icon.png')}}">
     <!-- Pignose Calender -->
     <link href="{{asset('admin/./plugins/pg-calendar/css/pignose.calendar.min.css')}}" rel="stylesheet">
     <!-- Chartist -->
@@ -38,15 +38,15 @@
             Nav header start
         ***********************************-->
         <div class="nav-header">
-            <div class="brand-logo">
+            {{-- <div class="brand-logo"> --}}
                 <a href="index.html">
-                    <b class="logo-abbr"><img src="admin/images/logo.png" alt=""> </b>
-                    <span class="logo-compact"><img src="admin/images/logo-compact.png" alt=""></span>
+                    <span class="logo-abbr"><img src="{{asset('admin/images/logo-k.t.png')}}"  width="60" height="30" alt=""> </span>
+                    <span class="logo-compact"><img src="{{asset('admin/images/logo.png')}}" width="100" height="90" alt=""></span>
                     <span class="brand-title">
-                        <img src="admin/images/logo-text.png" alt="">
+                        <img src="{{asset('admin/images/logo-kshop.png')}}" width="200" height="150" alt="">
                     </span>
                 </a>
-            </div>
+            {{-- </div> --}}
         </div>
         <!--**********************************
             Nav header end
@@ -81,7 +81,7 @@
                         <li class="icons dropdown">
                             <div class="user-img c-pointer position-relative"   data-toggle="dropdown">
                                 <span class="activity active"></span>
-                                <img src="admin/images/user/1.png" height="40" width="40" alt="">
+                                <img src="{{asset('admin/images/user/1.png')}}" height="40" width="40" alt="">
                             </div>
                             <div class="drop-down dropdown-profile animated fadeIn dropdown-menu">
                                 <div class="dropdown-content-body">

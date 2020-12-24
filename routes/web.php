@@ -14,11 +14,9 @@
 Route::get('/', function () {
     return view('customer.index');
 });
-Route::get('/cart', function () {
-    return view('customer.cart');
+Route::get('product-list', function () {
+    return view('customer.product-list');
 });
-
-
 
 
 

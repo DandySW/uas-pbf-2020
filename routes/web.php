@@ -37,3 +37,6 @@ Route::get('/admin/kategori', function () {
 Route::get('/admin/produk', function () {
     return view('admin.produk.view');
 });
+Route::get('/admin/create', function () {
+    return view('admin.produk.create');
+});

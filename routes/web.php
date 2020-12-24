@@ -33,3 +33,9 @@ Route::get('/admin/produk', function () {
 Route::get('/admin/create', function () {
     return view('admin.produk.create');
 });
+Route::get('/admin/edit', function () {
+    return view('admin.produk.edit');
+});
+Route::get('/admin/view', function () {
+    return view('admin.kategori.create');
+});

@@ -25,8 +25,8 @@ Route::get('/admin/view', function () {
     return view('admin.view_customer');
 });
 Route::get('/admin/kategori', function () {
-    return view('admin.kategori.view_kategori');
+    return view('admin.kategori.view');
 });
 Route::get('/admin/produk', function () {
-    return view('admin.produk.view_produk');
+    return view('admin.produk.view');
 });

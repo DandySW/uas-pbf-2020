@@ -14,9 +14,16 @@
 Route::get('/', function () {
     return view('customer.index');
 });
-Route::get('/elements', function () {
-    return view('customer.elements');
+Route::get('/cart', function () {
+    return view('customer.cart');
 });
+
+
+
+
+
+
+
 
 Route::get('/admin/dashboard', function () {
     return view('admin.index');

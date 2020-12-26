@@ -19,28 +19,20 @@ Route::get('product-list', function () {
 });
 
 
+Auth::routes();
 
+// Kumpulan Route Admin
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('dashboard', function () {
+        return view('admin.index');
+    });
+    Route::get('view', function () {
+        return view('admin.view_customer');
+    });
 
-
-
-Route::get('/admin/dashboard', function () {
-    return view('admin.index');
-});
-Route::get('/admin/view', function () {
-    return view('admin.view_customer');
-});
-Route::get('/admin/kategori', function () {
-    return view('admin.kategori.view');
-});
-Route::get('/admin/produk', function () {
-    return view('admin.produk.view');
-});
-Route::get('/admin/create', function () {
-    return view('admin.produk.create');
-});
-Route::get('/admin/edit', function () {
-    return view('admin.produk.edit');
-});
-Route::get('/admin/view', function () {
-    return view('admin.kategori.create');
+    // Grup Route Resource untuk Admin
+    Route::resources([
+        'kategori' => 'CategoryController',
+        'produk' => 'ProductController'
+    ]);
 });

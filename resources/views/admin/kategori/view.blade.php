@@ -17,6 +17,9 @@
             <div class="card-body">
                 <h4 class="card-title">Rekap Kategori</h4>
                 <div class="table-responsive">
+                    <a style="float: right;" href="{{url('/admin/kategori/create')}}" type="button"
+                        class="btn mb-1 btn-rounded btn-outline-info">Tambah
+                        Kategori</a>
                     <table class="table header-border table-hover verticle-middle">
                         <thead>
                             <tr>
@@ -32,7 +35,7 @@
                                 <td>Air Conditioner</td>
                                 <td>Aktif</td>
                                 <td class="text-center">
-                                    <a href="" type="button" class="btn mb-1 btn-rounded btn-info">Ubah</a>
+                                    <a href="" type="button" class="btn mb-1 btn-rounded btn-info">Edit</a>
                                     <a href="" type="button" class="btn mb-1 btn-rounded btn-danger">Hapus</a>
                                 </td>
                             </tr>

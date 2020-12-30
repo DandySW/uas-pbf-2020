@@ -18,14 +18,16 @@ class CreateUsersTable extends Migration
             $table->string('name', 100)->unique();
             $table->string('email', 100)->unique();
             $table->string('password');
-            $table->char('gender', 9)->nullable();
-            $table->string('address')->nullable();
-            $table->string('sub_district')->nullable();
-            $table->string('district')->nullable();
-            $table->string('city')->nullable();
-            $table->string('province')->nullable();
+            $table->char('gender', 9);
+            $table->string('address');
+            $table->unsignedInteger('city_id');
+            $table->unsignedInteger('province_id');
+            $table->char('postcode', 5);
+            $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
+
+            $table->foreign('city_id')->references('id')->on('cities');
         });
     }
 

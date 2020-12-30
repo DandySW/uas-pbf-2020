@@ -16,12 +16,6 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Nama Grup</label>
-                                    <div class="col-sm-10">
-                                        <input type="email" class="form-control" placeholder="Nama Grup">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Status</label>
                                     <div class="col-sm-10">
                                         <div class="form-row align-items-center">
@@ -43,12 +37,12 @@
                                                 <i class="fa fa-check"></i>
                                             </span>
                                         </button>
-                                        <button type="button" class="btn mb-1 btn-danger">
+                                        <a href="{{url('/admin/kategori')}}" type="button" class="btn mb-1 btn-danger">
                                             Cancel
                                             <span class="btn-icon-right">
                                                 <i class="fa fa-close"></i>
                                             </span>
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             </form>
@@ -60,6 +54,3 @@
     </div>
 </div>
 @endsection
-
-
-

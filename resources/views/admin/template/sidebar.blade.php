@@ -18,22 +18,14 @@
             </li>
             <li class="nav-label">Produk</li>
             <li>
-                <a class="has-arrow" href="{{url('/admin/kategori')}}" aria-expanded="false">
+                <a href="{{url('/admin/kategori')}}" aria-activedescendant="false">
                     <i class="icon-note menu-icon"></i><span class="nav-text">Kategori</span>
                 </a>
-                <ul aria-expanded="false">
-                    <li><a href="./index.html">Tambah Kategori</a></li>
-                    <li><a href="{{url('/admin/kategori')}}">Rekap Kategori</a></li>
-                </ul>
             </li>
             <li>
-                <a class="has-arrow" href="{{url('/admin/produk')}}" aria-expanded="false">
+                <a href="{{url('/admin/produk')}}" aria-activedescendant="false">
                     <i class="icon-grid menu-icon"></i><span class="nav-text">Produk</span>
                 </a>
-                <ul aria-expanded="false">
-                    <li><a href="./index.html">Tambah Produk</a></li>
-                    <li><a href="{{url('/admin/produk')}}">Rekap Produk</a></li>
-                </ul>
             </li>
         </ul>
     </div>

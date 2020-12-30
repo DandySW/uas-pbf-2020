@@ -35,7 +35,7 @@
                                     <div class="col-sm-10">
                                         <div class="form-row align-items-center">
                                             <div class="col-auto my-1">
-                                                    <input type="text" class="form-control">
+                                                <input type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -46,19 +46,20 @@
                                         <div class="form-row align-items-center">
                                             <div class="col-auto my-1">
                                                 <div class="input-group mb-3">
-                                                    <div class="input-group-prepend"><span class="input-group-text">Rp</span></div>
+                                                    <div class="input-group-prepend"><span
+                                                            class="input-group-text">Rp</span></div>
                                                     <input type="text" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Deskripsi</label>
                                     <div class="col-sm-10">
                                         <div class="form-row align-items-center">
-                                                <textarea class="form-control h-150px" rows="6" id="comment"></textarea>
+                                            <textarea class="form-control h-150px" rows="6" id="comment"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -66,7 +67,7 @@
                                     <div class="row">
                                         <label class="col-form-label col-sm-2 pt-0">Pilih Gambar</label>
                                         <div class="col-sm-10">
-                                            <div class="form-group"> 
+                                            <div class="form-group">
                                                 <input type="file" class="form-control-file">
                                             </div>
                                         </div>
@@ -80,12 +81,12 @@
                                                 <i class="fa fa-check"></i>
                                             </span>
                                         </button>
-                                        <button type="button" class="btn mb-1 btn-danger">
+                                        <a href="{{url('/admin/produk')}}" type="button" class="btn mb-1 btn-danger">
                                             Cancel
                                             <span class="btn-icon-right">
                                                 <i class="fa fa-close"></i>
                                             </span>
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             </form>
@@ -97,6 +98,3 @@
     </div>
 </div>
 @endsection
-
-
-

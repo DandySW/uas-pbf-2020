@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -14,7 +15,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('admin.kategori.view');
+        $categories = Category::all();
+
+        return view('admin.kategori.view', compact('categories'));
     }
 
     /**
@@ -35,7 +38,23 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(
+            [
+                'cat_name'  => 'required|unique:categories|max:30',
+                'status'    => 'required'
+            ],
+            [
+                'cat_name.required' => 'Kolom harus diisi',
+                'cat_name.unique'   => 'Kategori sudah ada, silahkan membuat kategori lain',
+                'cat_name.max'      => 'Kategori maksimal 30 karakter',
+                'status.required'   => 'Status harus dipilih'
+            ]
+        );
+
+        $request['slug'] = Str::slug($request->cat_name);
+        Category::create($request->all());
+
+        return redirect(url('admin/categories'))->with('success', 'Data Kategori berhasil ditambahkan');
     }
 
     /**
@@ -46,7 +65,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        //
+        return redirect(url('admin/categories'))->with('warning', 'Mohon maaf halaman yang anda cari tidak ada');
     }
 
     /**
@@ -57,7 +76,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        return view('admin.kategori.edit');
+        return view('admin.kategori.edit', compact('category'));
     }
 
     /**
@@ -69,7 +88,24 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        //
+        $request->validate(
+            [
+                'cat_name'  => 'required|unique:categories|max:30',
+                'status'    => 'required'
+            ],
+            [
+                'cat_name.required' => 'Kolom harus diisi',
+                'cat_name.unique'   => 'Kategori sudah ada, silahkan membuat kategori lain',
+                'cat_name.max'      => 'Kategori maksimal 30 karakter',
+                'status.required'   => 'Status harus dipilih'
+            ]
+        );
+
+        $request['slug'] = Str::slug($request->cat_name);
+        Category::where('id', $category->id)
+            ->update($request->except(['_method', '_token']));
+
+        return redirect(url('admin/categories'))->with('success', 'Data Kategori berhasil diubah');
     }
 
     /**
@@ -80,6 +116,7 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        Category::destroy($category->id);
+        return redirect(url('admin/categories'))->with('success', 'Data Kategori berhasil dihapus');
     }
 }

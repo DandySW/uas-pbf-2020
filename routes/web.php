@@ -29,11 +29,10 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('view', function () {
         return view('admin.view_customer');
     });
-    
-    
+
     // Grup Route Resource untuk Admin
     Route::resources([
-        'kategori' => 'CategoryController',
-        'produk' => 'ProductController'
+        'categories' => 'CategoryController',
+        'products' => 'ProductController'
     ]);
 });

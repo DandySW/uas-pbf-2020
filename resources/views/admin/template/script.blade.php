@@ -32,3 +32,6 @@ Scripts
 
 <!-- Dashboard -->
 <script src="{{asset('admin/js/dashboard/dashboard-1.js')}}"></script>
+
+<!-- My Script -->
+<script src="{{asset('admin/js/myscript.js')}}"></script>

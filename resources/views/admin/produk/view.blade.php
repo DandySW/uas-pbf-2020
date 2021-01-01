@@ -17,7 +17,7 @@
             <div class="card-body">
                 <h4 class="card-title">Rekap Produk</h4>
                 <div class="table-responsive">
-                    <a style="float: right;" href="{{url('/admin/produk/create')}}" type="button"
+                    <a style="float: right;" href="{{url('/admin/products/create')}}" type="button"
                         class="btn mb-1 btn-rounded btn-outline-info">Tambah
                         Produk</a>
                     <table class="table header-border table-hover verticle-middle">

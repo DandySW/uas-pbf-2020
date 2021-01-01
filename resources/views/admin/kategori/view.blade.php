@@ -1,7 +1,6 @@
 @extends('admin.template.master')
 @section('content')
 <div class="content-body">
-
     <div class="row page-titles mx-0">
         <div class="col p-md-0">
             <ol class="breadcrumb">
@@ -10,42 +9,83 @@
         </div>
     </div>
 
+
     <div class="container-fluid">
-        {{-- <div class="row">
-            <div class="col-lg-6"> --}}
+
+        @if (session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {!! session('success') !!}
+        </div>
+        @elseif (session('warning'))
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {!! session('warning') !!}
+        </div>
+        @endif
+
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Rekap Kategori</h4>
                 <div class="table-responsive">
-                    <a style="float: right;" href="{{url('/admin/kategori/create')}}" type="button"
-                        class="btn mb-1 btn-rounded btn-outline-info">Tambah
-                        Kategori</a>
+                    <a style="float: right;" href="{{url('/admin/categories/create')}}" type="button"
+                        class="btn mb-1 btn-rounded btn-outline-info">Tambah Kategori</a>
                     <table class="table header-border table-hover verticle-middle">
                         <thead>
                             <tr>
-                                <th scope="col">No</th>
+                                <th style="text-align: center" scope="col">No</th>
                                 <th scope="col">Nama Kategori</th>
+                                <th scope="col">Slug</th>
                                 <th scope="col">Status</th>
-                                <th th scope="col" class="text-center">Aksi</th>
+                                <th scope="col" class="text-center">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($categories as $category)
                             <tr>
-                                <th>1</th>
-                                <td>Air Conditioner</td>
-                                <td>Aktif</td>
+                                <th style="text-align: center">{{ $category->id }}</th>
+                                <td>{{ $category->cat_name }}</td>
+                                <td>{{ $category->slug }}</td>
+                                <td>{{ $category->status == 1 ? 'Aktif' : 'Tidak Aktif' }}</td>
                                 <td class="text-center">
-                                    <a href="" type="button" class="btn mb-1 btn-rounded btn-info">Edit</a>
-                                    <a href="" type="button" class="btn mb-1 btn-rounded btn-danger">Hapus</a>
+                                    <a href="{{ route('categories.edit', $category->id) }}" type="button"
+                                        class="btn mb-1 btn-rounded btn-info">Edit</a>
+                                    <button type="button" class="btn mb-1 btn-rounded btn-danger" data-toggle="modal"
+                                        data-target="#deleteCategory{{ $category->id }}">Hapus</button>
                                 </td>
                             </tr>
+
+                            <!-- Modal hapus kategori -->
+                            <div class="modal fade" id="deleteCategory{{ $category->id }}" data-backdrop="static"
+                                data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">Apakah anda yakin ingin
+                                                menghapus Kategori "{{ $category->cat_name }}" ?</h5>
+                                        </div>
+                                        <div class="modal-body">
+                                            <strong>Perhatian!</strong> Data Kategori yang telah dihapus tidak dapat
+                                            dikembalikan
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn mb-1 btn-secondary"
+                                                data-dismiss="modal">Batal</button>
+                                            <form action=" {{ route('categories.destroy', $category->id) }}"
+                                                method="POST" class="d-inline">
+                                                @method('delete')
+                                                @csrf
+                                                <button type="submit" class="btn mb-1 btn-danger">Yakin</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-        {{-- </div>
-        </div> --}}
     </div>
 </div>
 @endsection

@@ -81,7 +81,7 @@
                                                 <i class="fa fa-check"></i>
                                             </span>
                                         </button>
-                                        <a href="{{url('/admin/produk')}}" type="button" class="btn mb-1 btn-danger">
+                                        <a href="{{url('/admin/products')}}" type="button" class="btn mb-1 btn-danger">
                                             Cancel
                                             <span class="btn-icon-right">
                                                 <i class="fa fa-close"></i>

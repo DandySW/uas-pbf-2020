@@ -18,12 +18,12 @@
             </li>
             <li class="nav-label">Produk</li>
             <li>
-                <a href="{{url('/admin/kategori')}}" aria-activedescendant="false">
+                <a href="{{url('/admin/categories')}}" aria-activedescendant="false">
                     <i class="icon-note menu-icon"></i><span class="nav-text">Kategori</span>
                 </a>
             </li>
             <li>
-                <a href="{{url('/admin/produk')}}" aria-activedescendant="false">
+                <a href="{{url('/admin/products')}}" aria-activedescendant="false">
                     <i class="icon-grid menu-icon"></i><span class="nav-text">Produk</span>
                 </a>
             </li>

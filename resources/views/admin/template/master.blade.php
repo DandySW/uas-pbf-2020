@@ -19,6 +19,9 @@
 
     <!-- Custom Stylesheet -->
     <link href="{{asset('admin/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/plugins/sweetalert/css/sweetalert.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/plugins/toastr/css/toastr.min.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/plugins/tables/css/datatable/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
 </head>
 
 <body>

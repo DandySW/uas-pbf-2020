@@ -33,5 +33,15 @@ Scripts
 <!-- Dashboard -->
 <script src="{{asset('admin/js/dashboard/dashboard-1.js')}}"></script>
 
-<!-- My Script -->
-<script src="{{asset('admin/js/myscript.js')}}"></script>
+<!-- Sweet Alert -->
+<script src="{{ asset('admin/plugins/sweetalert/js/sweetalert.min.js') }}"></script>
+<script src="{{ asset('admin/plugins/sweetalert/js/sweetalert.init.js') }}"></script>
+
+<!-- Toastr -->
+<script src="{{ asset('admin/plugins/toastr/js/toastr.min.js')}}"></script>
+<script src="{{ asset('admin/plugins/toastr/js/toastr.init.js')}}"></script>
+
+<!-- Table -->
+<script src="{{ asset('admin/plugins/tables/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{ asset('admin/plugins/tables/js/datatable/dataTables.bootstrap4.min.js')}}"></script>
+<script src="{{ asset('admin/plugins/tables/js/datatable-init/datatable-basic.min.js')}}"></script>

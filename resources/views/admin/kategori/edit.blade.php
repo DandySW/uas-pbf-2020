@@ -1,6 +1,16 @@
 @extends('admin.template.master')
 @section('content')
 <div class="content-body">
+
+    <div class="row page-titles mx-0">
+        <div class="col p-md-0">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{url('/admin/categories')}}">Kategori</a></li>
+                <li class="breadcrumb-item"><a>Edit Kategori</a></li>
+            </ol>
+        </div>
+    </div>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">

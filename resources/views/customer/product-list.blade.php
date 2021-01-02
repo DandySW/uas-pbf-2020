@@ -41,7 +41,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="single_sedebar">
+                    {{-- <div class="single_sedebar">
                         <div class="select_option">
                             <div class="select_option_list">Type <i class="right fas fa-caret-down"></i> </div>
                             <div class="select_option_dropdown">
@@ -51,7 +51,7 @@
                                 <p><a href="#">Type 4</a></p>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="col-md-8">
@@ -103,7 +103,7 @@
                                 <p>From $5</p>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-sm-6">
+                        {{-- <div class="col-lg-6 col-sm-6">
                             <div class="single_product_item">
                                 <img src="{{ asset('customer/img/categori/product5.png') }}" alt="" class="img-fluid">
                                 <h3> <a href="single-product.html">Memory foam filling cotton Slow rebound pillows</a>
@@ -132,7 +132,7 @@
                                 <h3> <a href="single-product.html">Geometric striped flower home classy decor</a> </h3>
                                 <p>From $5</p>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="load_more_btn text-center">
                         <a href="#" class="btn_3">Load More</a>
@@ -145,7 +145,7 @@
 <!-- product list part end-->
 
 <!-- client review part here -->
-<section class="client_review">
+{{-- <section class="client_review">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
@@ -178,7 +178,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!-- client review part end -->
 
 @endsection

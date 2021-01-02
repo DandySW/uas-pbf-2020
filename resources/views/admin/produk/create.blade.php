@@ -6,13 +6,13 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h2 class="card-title">Rekap Produk</h2>
+                        <h2 class="card-title">Tambah Produk</h2>
                         <div class="basic-form">
                             <form>
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Nama Produk</label>
-                                    <div class="col-sm-10">
-                                        <input type="email" class="form-control" placeholder="Nama Produk">
+                                    <div class="col-sm-4">
+                                        <input type="email" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -22,16 +22,17 @@
                                             <div class="col-auto my-1">
                                                 <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                                                     <option selected="selected">Pilih Kategori</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
+                                                    @foreach ($categories as $category)
+                                                    <option value="{{ $category->id }}">{{ $category->cat_name }}
+                                                    </option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Stock</label>
+                                    <label class="col-sm-2 col-form-label">Stok</label>
                                     <div class="col-sm-10">
                                         <div class="form-row align-items-center">
                                             <div class="col-auto my-1">

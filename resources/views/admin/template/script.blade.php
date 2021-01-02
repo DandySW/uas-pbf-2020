@@ -6,6 +6,7 @@ Scripts
 <script src="{{asset('admin/js/settings.js')}}"></script>
 <script src="{{asset('admin/js/gleek.js')}}"></script>
 <script src="{{asset('admin/js/styleSwitcher.js')}}"></script>
+<script src="{{asset('admin/js/myscript.js')}}"></script>
 
 <!-- Chartjs -->
 <script src="{{asset('admin/plugins/chart.js/Chart.bundle.min.js')}}"></script>

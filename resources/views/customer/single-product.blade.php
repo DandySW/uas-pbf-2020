@@ -22,36 +22,36 @@
 <div class="product_image_area">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-12">
+            <div class="col-lg-6">
                 <div class="product_img_slide owl-carousel">
                     <div class="single_product_img">
-                        <img src="{{ asset('customer/img/product/single_product.png') }}" alt="#" class="img-fluid">
+                        <img src="https://loremflickr.com/800/800" alt="#" class="img-fluid">
                     </div>
                     <div class="single_product_img">
-                        <img src="{{ asset('customer/img/product/single_product.png') }}" alt="#" class="img-fluid">
+                        <img src="https://loremflickr.com/800/800" alt="#" class="img-fluid">
                     </div>
                     <div class="single_product_img">
-                        <img src="{{ asset('customer/img/product/single_product.png') }}" alt="#" class="img-fluid">
+                        <img src="https://loremflickr.com/800/800" alt="#" class="img-fluid">
                     </div>
                 </div>
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-6">
                 <div class="single_product_text text-center">
-                    <h3>Foam filling cotton slow <br>
-                        rebound pillows</h3>
-                    <p>
+                    <h3>Foam filling cotton slow rebound pillows</h3>
+                    <blockquote class="generic-blockquote" style="text-align: justify">
+                        <h5 style="text-align: left">Deskripsi:</h5>
                         Seamlessly empower fully researched growth strategies and interoperable internal or “organic”
                         sources. Credibly innovate granular internal or “organic” sources whereas high standards in
                         web-readiness. Credibly innovate granular internal or organic sources whereas high standards in
                         web-readiness. Energistically scale future-proof core competencies vis-a-vis impactful
                         experiences. Dramatically synthesize integrated schemas. with optimal networks.
-                    </p>
+                    </blockquote>
                     <div class="card_area">
                         <div class="product_count_area">
                             <p>Quantity</p>
                             <div class="product_count d-inline-block">
                                 <span class="product_count_item inumber-decrement"> <i class="ti-minus"></i></span>
-                                <input class="product_count_item input-number" type="text" value="1" min="0" max="10">
+                                <input class="product_count_item input-number" type="text" value="1" min="0" max="8">
                                 <span class="product_count_item number-increment"> <i class="ti-plus"></i></span>
                             </div>
                             <p>$5</p>

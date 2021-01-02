@@ -17,10 +17,11 @@
                             <div class="hero__caption">
                                 <span data-animation="fadeInRight" data-delay=".4s">All New Merchandise</span>
                                 <h1 data-animation="fadeInRight" data-delay=".6s">Kpop <br> Collection</h1>
-                                <p data-animation="fadeInRight" data-delay=".8s">Best Merch Collection By 2020!</p>
+                                <p data-animation="fadeInRight" data-delay=".8s">Best Merch Collection By
+                                    {{ date('Y') }}!</p>
                                 <!-- Hero-btn -->
                                 <div class="hero__btn" data-animation="fadeInRight" data-delay="1s">
-                                    <a href="industries.html" class="btn hero-btn">Shop Now</a>
+                                    <a href="#products" class="btn hero-btn" id="products">Shop Now</a>
                                 </div>
                             </div>
                         </div>
@@ -36,10 +37,9 @@
         <div class="container">
             <div class="row product-btn d-flex justify-content-end align-items-end">
                 <!-- Section Tittle -->
-                <div class="col-xl-4 col-lg-5 col-md-5">
-                    <div class="section-tittle mb-30">
-                        <br>
-                        <h2>Latest Products</h2>
+                <div class="col-xl-4 col-lg-5 col-md-5" id="">
+                    <div class="section-tittle mb-30 mt-50">
+                        <h2>Our Products</h2>
                     </div>
                 </div>
                 <div class="col-xl-8 col-lg-7 col-md-7">
@@ -52,96 +52,66 @@
                 <!-- card one -->
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="row">
-                        <div class="col-xl-4 col-lg-4 col-md-6">
+                        <a href="#" class="col-xl-3 col-lg-3 col-md-6">
                             <div class="single-product mb-60">
                                 <div class="product-img">
                                     <img src="{{ asset('customer/img/categori/product1.png') }}" alt="">
                                 </div>
                                 <div class="product-caption">
-                                    <h4><a href="#">Green Dress with details</a></h4>
+                                    <h4>Green Dress with details</h4>
                                     <div class="price">
                                         <ul>
-                                            <li>$40.00</li>
+                                            <li style="color: #ff003c">$40.00</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
+                        </a>
+                        <a href="#" class="col-xl-3 col-lg-3 col-md-6">
                             <div class="single-product mb-60">
                                 <div class="product-img">
-                                    <img src="{{ asset('customer/img/categori/product2.png') }}" alt="">
+                                    <img src="{{ asset('customer/img/categori/product1.png') }}" alt="">
                                 </div>
                                 <div class="product-caption">
-                                    <h4><a href="#">Green Dress with details</a></h4>
+                                    <h4>Green Dress with details</h4>
                                     <div class="price">
                                         <ul>
-                                            <li>$40.00</li>
+                                            <li style="color: #ff003c">$40.00</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
+                        </a>
+                        <a href="#" class="col-xl-3 col-lg-3 col-md-6">
                             <div class="single-product mb-60">
                                 <div class="product-img">
-                                    <img src="{{ asset('customer/img/categori/product3.png') }}" alt="">
+                                    <img src="{{ asset('customer/img/categori/product1.png') }}" alt="">
                                 </div>
                                 <div class="product-caption">
-                                    <h4><a href="#">Green Dress with details</a></h4>
+                                    <h4>Green Dress with details</h4>
                                     <div class="price">
                                         <ul>
-                                            <li>$40.00</li>
+                                            <li style="color: #ff003c">$40.00</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
+                        </a>
+                        <a href="#" class="col-xl-3 col-lg-3 col-md-6">
                             <div class="single-product mb-60">
                                 <div class="product-img">
-                                    <img src="{{ asset('customer/img/categori/product4.png') }}" alt="">
+                                    <img src="{{ asset('customer/img/categori/product1.png') }}" alt="">
                                 </div>
                                 <div class="product-caption">
-                                    <h4><a href="#">Green Dress with details</a></h4>
+                                    <h4>Green Dress with details</h4>
                                     <div class="price">
                                         <ul>
-                                            <li>$40.00</li>
+                                            <li style="color: #ff003c">$40.00</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single-product mb-60">
-                                <div class="product-img">
-                                    <img src="{{ asset('customer/img/categori/product5.png') }}" alt="">
-                                </div>
-                                <div class="product-caption">
-                                    <h4><a href="#">Green Dress with details</a></h4>
-                                    <div class="price">
-                                        <ul>
-                                            <li>$40.00</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single-product mb-60">
-                                <div class="product-img">
-                                    <img src="{{ asset('customer/img/categori/product6.png') }}" alt="">
-                                </div>
-                                <div class="product-caption">
-                                    <h4><a href="#">Green Dress with details</a></h4>
-                                    <div class="price">
-                                        <ul>
-                                            <li>$40.00</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -149,6 +119,39 @@
         </div>
     </section>
     <!-- Latest Products End -->
+
+    <!-- Best Product Start -->
+    <div class="best-product-area lf-padding">
+        <div class="product-wrapper bg-height" style="background-image: url('customer/img/categori/card.png')">
+            <div class="container position-relative">
+                <div class="row justify-content-between align-items-end">
+                    <div class="product-man position-absolute d-none d-lg-block">
+                        <img src="{{ asset('customer/img/categori/card-man.png') }}" alt="" />
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2 d-none d-lg-block">
+                        <div class="vertical-text">
+                            <span>Manz</span>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-lg-8">
+                        <div class="best-product-caption">
+                            <h2>
+                                Find The Best Product<br />
+                                from Our Shop
+                            </h2>
+                            <p>Designers who are interesten creating state ofthe.</p>
+                            <a href="#products" class="black-btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Shape -->
+        <div class="shape bounce-animate d-none d-md-block">
+            <img src="{{ asset('customer/img/categori/card-shape.png') }}" alt="" />
+        </div>
+    </div>
+    <!-- Best Product End-->
 
     <!-- Shop Method Start-->
     <div class="shop-method-area section-padding30">

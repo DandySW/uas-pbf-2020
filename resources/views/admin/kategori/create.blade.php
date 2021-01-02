@@ -5,7 +5,7 @@
     <div class="row page-titles mx-0">
         <div class="col p-md-0">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{url('/admin/categories')}}">Kategori</a></li>
+                <li class="breadcrumb-item"><a>Kategori</a></li>
                 <li class="breadcrumb-item"><a>Edit Kategori</a></li>
             </ol>
         </div>

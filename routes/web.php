@@ -14,8 +14,8 @@
 Route::get('/', function () {
     return view('customer.index');
 });
-Route::get('product-list', function () {
-    return view('customer.product-list');
+Route::get('single-product', function () {
+    return view('customer.single-product');
 });
 
 

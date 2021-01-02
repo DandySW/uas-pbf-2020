@@ -43,6 +43,15 @@ Route::get('/masuk', function () {
 Route::get('/product-list', function () {
     return view('customer.product-list');
 });
-Route::get('/category', function () {
-    return view('customer.Catagori');
+Route::get('/contact', function () {
+    return view('customer.about');
+});
+Route::get('/cart', function () {
+    return view('customer.cart');
+});
+Route::get('/confirmation', function () {
+    return view('customer.confirmation');
+});
+Route::get('/single', function () {
+    return view('customer.single-product');
 });

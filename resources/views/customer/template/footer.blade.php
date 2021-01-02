@@ -28,9 +28,8 @@
                         <div class="footer-tittle">
                             <h4>Quick Links</h4>
                             <ul>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#"> Offers & Discounts</a></li>
-                                <li><a href="#"> Get Coupon</a></li>
+                                <li><a href="#">Cart</a></li>
+                                <li><a href="#">Product</a></li>
                                 <li><a href="#"> Contact Us</a></li>
                             </ul>
                         </div>
@@ -41,10 +40,10 @@
                         <div class="footer-tittle">
                             <h4>New Products</h4>
                             <ul>
-                                <li><a href="#">Woman Cloth</a></li>
-                                <li><a href="#">Fashion Accessories</a></li>
-                                <li><a href="#"> Man Accessories</a></li>
-                                <li><a href="#"> Rubber made Toys</a></li>
+                                <li><a href="#">Album</a></li>
+                                <li><a href="#">Clothes</a></li>
+                                <li><a href="#">Lightstick</a></li>
+                                <li><a href="#">Aksesoris</a></li>
                             </ul>
                         </div>
                     </div>
@@ -82,7 +81,6 @@
                         <div class="footer-social">
                             <a href="#"><i class="fab fa-twitter"></i></a>
                             <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-behance"></i></a>
                             <a href="#"><i class="fas fa-globe"></i></a>
                         </div>
                     </div>

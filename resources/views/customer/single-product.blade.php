@@ -4,7 +4,7 @@
 <div class="slider-area ">
     <!-- Mobile Menu -->
     <div class="single-slider slider-height2 d-flex align-items-center"
-        data-background="{{ asset('customer/img/hero/category.jpg') }}">
+        data-background="{{ asset('customer/img/hero/bg.png') }}">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">

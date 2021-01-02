@@ -30,10 +30,9 @@
                             <div class="main-menu f-right d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">Catagori</a></li>
-                                        <li><a href="#">Product List</a></li>
-                                        <li><a href="#">Contact</a></li>
+                                        <li><a href="{{url('/')}}">Home</a></li>
+                                        <li><a href="{{url('/product-list')}}">Product List</a></li>
+                                        <li><a href="{{url('/contact')}}">Contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -53,7 +52,7 @@
                                         <a href="#"><i class="fas fa-shopping-cart"></i></a>
                                     </div>
                                 </li>
-                                <li class="d-none d-lg-block"> <a href="#" class="btn header-btn">Sign in</a></li>
+                                <li class="d-none d-lg-block"> <a href="{{url('/masuk')}}" class="btn header-btn">Sign in</a></li>
                             </ul>
                         </div>
                         <!-- Mobile Menu -->

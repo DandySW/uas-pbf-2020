@@ -36,10 +36,12 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="single_product_text text-center">
-                    <h3>Foam filling cotton slow rebound pillows</h3>
+                <div class="single_product_text text-left">
+                    <h3 style="text-align: center">Foam filling cotton slow rebound pillows</h3>
+                    <h5><b>Kategori:</b> Album</h5>
+                    <h5><b>Stok:</b> 100</h5>
+                    <h5><b>Deskripsi:</b></h5>
                     <blockquote class="generic-blockquote" style="text-align: justify">
-                        <h5 style="text-align: left">Deskripsi:</h5>
                         Seamlessly empower fully researched growth strategies and interoperable internal or “organic”
                         sources. Credibly innovate granular internal or “organic” sources whereas high standards in
                         web-readiness. Credibly innovate granular internal or organic sources whereas high standards in
@@ -56,7 +58,7 @@
                             </div>
                             <p>$5</p>
                         </div>
-                        <div class="add_to_cart">
+                        <div class="add_to_cart" style="text-align: center">
                             <a href="#" class="btn_3">add to cart</a>
                         </div>
                     </div>

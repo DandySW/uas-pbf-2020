@@ -18,7 +18,7 @@
                                 <span data-animation="fadeInRight" data-delay=".4s">All New Merchandise</span>
                                 <h1 data-animation="fadeInRight" data-delay=".6s">Kpop <br> Collection</h1>
                                 <p data-animation="fadeInRight" data-delay=".8s">Best Merch Collection By
-                                    {{ date('Y') }}!</p>
+                                    {{ Date('Y') }}!</p>
                                 <!-- Hero-btn -->
                                 <div class="hero__btn" data-animation="fadeInRight" data-delay="1s">
                                     <a href="#products" class="btn hero-btn" id="products">Shop Now</a>
@@ -121,7 +121,7 @@
     <!-- Latest Products End -->
 
     <!-- Best Product Start -->
-    <div class="best-product-area lf-padding">
+    <div class="best-product-area lf-padding mt-100">
         <div class="product-wrapper bg-height" style="background-image: url('customer/img/categori/card.png')">
             <div class="container position-relative">
                 <div class="row justify-content-between align-items-end">
@@ -154,25 +154,25 @@
     <!-- Best Product End-->
 
     <!-- Shop Method Start-->
-    <div class="shop-method-area section-padding30">
+    <div class="shop-method-area section-padding30 mt-100">
         <div class="container">
             <div class="row d-flex justify-content-between">
                 <div class="col-xl-3 col-lg-3 col-md-6">
-                    <div class="single-method mb-40">
+                    <div class="single-method mb-50">
                         <i class="ti-package"></i>
                         <h6>Free Shipping Method</h6>
                         <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6">
-                    <div class="single-method mb-40">
+                    <div class="single-method mb-50">
                         <i class="ti-unlock"></i>
                         <h6>Secure Payment System</h6>
                         <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6">
-                    <div class="single-method mb-40">
+                    <div class="single-method mb-50">
                         <i class="ti-reload"></i>
                         <h6>Secure Payment System</h6>
                         <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>

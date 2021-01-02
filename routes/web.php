@@ -36,3 +36,13 @@ Route::group(['prefix' => 'admin'], function () {
         'products' => 'ProductController'
     ]);
 });
+
+Route::get('/masuk', function () {
+    return view('customer.login');
+});
+Route::get('/product-list', function () {
+    return view('customer.product-list');
+});
+Route::get('/category', function () {
+    return view('customer.Catagori');
+});

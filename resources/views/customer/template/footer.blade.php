@@ -9,15 +9,16 @@
                         <div class="single-footer-caption mb-30">
                             <!-- logo -->
                             <div class="footer-logo">
-                                <a href="#"><img src="{{ asset('customer/img/logo/logo2_footer.png') }}"
-                                        alt="logo footer"></a>
+                               <a><img src="{{asset('customer/img/LOGO KSHOP.png')}}"alt="logo footer" width="150"></a>
+                               <p>Korea shop is a trusted online k-pop shop and only sells original things with fast delivery</p>
+                                    <p>Korea Shop 은 빠르고 빠른 배송으로 오리지널 상품만을 판매하는 신뢰받는 온라인 K-POP 샵입니다.</p>
                             </div>
-                            <div class="footer-tittle">
+                            {{-- <div class="footer-tittle">
                                 <div class="footer-pera">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor
-                                        incididunt ut labore.</p>
+                                    <p>Korea shop is a trusted online k-pop shop and only sells original things with fast delivery</p>
+                                    <p>Korea Shop 은 빠르고 빠른 배송으로 오리지널 상품만을 판매하는 신뢰받는 온라인 K-POP 샵입니다.</p>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -68,9 +69,8 @@
                     <div class="footer-copy-right">
                         <p>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;{{ Date('Y') }} All rights reserved | This template is made with <i
-                                class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
-                                target="_blank">Colorlib</a>
+                            Copyright &copy;{{ Date('Y') }} All rights reserved | This system develop by team KShop<i
+                                class="ti-heart" aria-hidden="true"></i> 
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </p>
                     </div>

@@ -17,7 +17,7 @@
                             <div class="hero__caption">
                                 <span data-animation="fadeInRight" data-delay=".4s">All New Merchandise</span>
                                 <h1 data-animation="fadeInRight" data-delay=".6s">Kpop <br> Collection</h1>
-                                <p data-animation="fadeInRight" data-delay=".8s">Best Merch Collection By 2020!</p>
+                                <p data-animation="fadeInRight" data-delay=".8s">Best Merch Collection By {{ Date('Y') }}!</p>
                                 <!-- Hero-btn -->
                                 <div class="hero__btn" data-animation="fadeInRight" data-delay="1s">
                                     <a href="industries.html" class="btn hero-btn">Shop Now</a>

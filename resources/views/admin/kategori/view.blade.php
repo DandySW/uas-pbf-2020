@@ -27,12 +27,12 @@
             <div class="table-responsive">
                 <table class="table table-striped table-bordered zero-configuration">
                     <thead>
-                        <tr>
-                            <th style="text-align: center" scope="col">No</th>
-                            <th style="text-align: center" scope="col">Nama Kategori</th>
-                            <th style="text-align: center" scope="col">Slug</th>
-                            <th style="text-align: center" scope="col">Status</th>
-                            <th scope="col" class="text-center">Aksi</th>
+                        <tr class="text-center">
+                            <th scope="col">No</th>
+                            <th scope="col">Nama Kategori</th>
+                            <th scope="col">Slug</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>

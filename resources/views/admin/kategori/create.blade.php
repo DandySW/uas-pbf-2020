@@ -6,7 +6,7 @@
         <div class="col p-md-0">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a>Kategori</a></li>
-                <li class="breadcrumb-item"><a>Edit Kategori</a></li>
+                <li class="breadcrumb-item"><a>Tambah Kategori</a></li>
             </ol>
         </div>
     </div>
@@ -16,7 +16,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h2 class="card-title">Kategori</h2>
+                        <h2 class="card-title">Tambah Kategori</h2> <br>
                         <div class="basic-form">
                             <form action="{{ route('categories.store') }}" method="POST">
                                 @csrf

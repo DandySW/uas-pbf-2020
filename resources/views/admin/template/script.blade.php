@@ -6,9 +6,8 @@ Scripts
 <script src="{{asset('admin/js/settings.js')}}"></script>
 <script src="{{asset('admin/js/gleek.js')}}"></script>
 <script src="{{asset('admin/js/styleSwitcher.js')}}"></script>
-<script src="{{asset('admin/js/myscript.js')}}"></script>
 
-<!-- Chartjs -->
+{{-- <!-- Chartjs -->
 <script src="{{asset('admin/plugins/chart.js/Chart.bundle.min.js')}}"></script>
 
 <!-- Circle progress -->
@@ -29,20 +28,22 @@ Scripts
 
 <!-- ChartistJS -->
 <script src="{{asset('admin/plugins/chartist/js/chartist.min.js')}}"></script>
-<script src="{{asset('admin/plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js')}}"></script>
+<script src="{{asset('admin/plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js')}}"></script> --}}
 
 <!-- Dashboard -->
 <script src="{{asset('admin/js/dashboard/dashboard-1.js')}}"></script>
-
 <!-- Sweet Alert -->
-<script src="{{ asset('admin/plugins/sweetalert/js/sweetalert.min.js') }}"></script>
-<script src="{{ asset('admin/plugins/sweetalert/js/sweetalert.init.js') }}"></script>
-
+{{-- <script src="{{ asset('admin/plugins/sweetalert/js/sweetalert.min.js') }}"></script>
+<script src="{{ asset('admin/plugins/sweetalert/js/sweetalert.init.js') }}"></script> --}}
 <!-- Toastr -->
-<script src="{{ asset('admin/plugins/toastr/js/toastr.min.js')}}"></script>
-<script src="{{ asset('admin/plugins/toastr/js/toastr.init.js')}}"></script>
-
+{{-- <script src="{{ asset('admin/plugins/toastr/js/toastr.min.js')}}"></script>
+<script src="{{ asset('admin/plugins/toastr/js/toastr.init.js')}}"></script> --}}
 <!-- Table -->
 <script src="{{ asset('admin/plugins/tables/js/jquery.dataTables.min.js')}}"></script>
 <script src="{{ asset('admin/plugins/tables/js/datatable/dataTables.bootstrap4.min.js')}}"></script>
 <script src="{{ asset('admin/plugins/tables/js/datatable-init/datatable-basic.min.js')}}"></script>
+<!-- Summernote -->
+<script src="{{asset('admin/plugins/summernote/dist/summernote.min.js')}}"></script>
+<script src="{{asset('admin/plugins/summernote/dist/summernote-init.js')}}"></script>
+<!-- My Script -->
+<script src="{{asset('admin/js/myscript.js')}}"></script>

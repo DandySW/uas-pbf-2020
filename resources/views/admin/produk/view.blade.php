@@ -27,16 +27,16 @@
             <div class="table-responsive">
                 <table class="table table-striped table-bordered zero-configuration">
                     <thead>
-                        <tr>
-                            <th style="text-align: center" scope="col">No</th>
-                            <th style="text-align: center" scope="col">Nama Produk</th>
-                            <th style="text-align: center" scope="col">Slug</th>
-                            <th style="text-align: center" scope="col">Kategori</th>
-                            <th style="text-align: center" scope="col">Stok</th>
-                            <th style="text-align: center" scope="col">Harga</th>
-                            <th style="text-align: center" scope="col">Deskripsi</th>
-                            <th style="text-align: center" scope="col">Gambar</th>
-                            <th scope="col" class="text-center">Aksi</th>
+                        <tr class="text-center">
+                            <th scope="col">No</th>
+                            <th scope="col">Nama Produk</th>
+                            <th scope="col">Slug</th>
+                            <th scope="col">Kategori</th>
+                            <th scope="col">Stok</th>
+                            <th scope="col">Harga</th>
+                            <th scope="col">Deskripsi</th>
+                            <th scope="col">Gambar</th>
+                            <th scope="col">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -58,3 +58,6 @@ Route::get('/confirmation', function () {
 Route::get('/single', function () {
     return view('customer.single-product');
 });
+Route::get('/riwayat', function () {
+    return view('customer.recently');
+});

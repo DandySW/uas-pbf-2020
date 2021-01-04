@@ -101,44 +101,6 @@
               <td>
                 <h5>Rp ongkir</h5><br>
                 <div class="shipping_box">
-                  {{-- <ul class="list">
-                    <li>
-                      Flat Rate: $5.00
-                      <input type="radio" aria-label="Radio button for following text input">
-                    </li>
-                    <li>
-                      Free Shipping
-                      <input type="radio" aria-label="Radio button for following text input">
-                    </li>
-                    <li>
-                      Flat Rate: $10.00
-                      <input type="radio" aria-label="Radio button for following text input">
-                    </li>
-                    <li class="active">
-                      Local Delivery: $2.00
-                      <input type="radio" aria-label="Radio button for following text input">
-                    </li>
-                  </ul>
-                  <h6>
-                    Calculate Shipping
-                    <i class="fa fa-caret-down" aria-hidden="true"></i>
-                  </h6> --}}
-                  <select class="shipping_select">
-                    <option value="1">Jawa Timur</option>
-                    <option value="2">India</option>
-                    <option value="4">Pakistan</option>
-                  </select>
-                  <select class="shipping_select section_bg">
-                    <option value="1">Situbondo</option>
-                    <option value="2">Select a State</option>
-                    <option value="4">Select a State</option>
-                  </select>
-                  <select class="shipping_select section_bg">
-                    <option value="1">Panarukan</option>
-                    <option value="2">Select a State</option>
-                    <option value="4">Select a State</option>
-                  </select>
-                  <input class="post_code" type="text" placeholder="Alamat lengkap">
                 </div>
               </td>
             </tr>
@@ -147,6 +109,7 @@
         <div class="checkout_btn_inner float-right">
           <a class="btn_1" href="#">Continue Shopping</a>
           <a class="btn_1 checkout_btn_1" href="{{url('/checkout')}}">Checkout</a>
+          {{-- !! DAN TAMBAH VALIDASI KALO BUKAN USER DAKBISA LANJUT YAA --}}
         </div>
       </div>
     </div>

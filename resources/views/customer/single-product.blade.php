@@ -25,28 +25,31 @@
             <div class="col-lg-6">
                 <div class="product_img_slide owl-carousel">
                     <div class="single_product_img">
-                        <img src="https://loremflickr.com/800/800" alt="#" class="img-fluid">
+                        <img src="{{asset('customer/img/product/reload1.png')}}" alt="#" class="img-fluid">
                     </div>
                     <div class="single_product_img">
-                        <img src="https://loremflickr.com/800/800" alt="#" class="img-fluid">
+                        <img src="{{asset('customer/img/product/reload1.png')}}" alt="#" class="img-fluid">
                     </div>
                     <div class="single_product_img">
-                        <img src="https://loremflickr.com/800/800" alt="#" class="img-fluid">
+                        <img src="{{asset('customer/img/product/reload1.png')}}" alt="#" class="img-fluid">
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="single_product_text text-left">
-                    <h3 style="text-align: center">Foam filling cotton slow rebound pillows</h3>
+                    <h3 style="text-align: center">NCT Dream Reload Version</h3>
                     <h5><b>Kategori:</b> Album</h5>
                     <h5><b>Stok:</b> 100</h5>
+                    <h5><b>Harga:</b> 280000</h5>
                     <h5><b>Deskripsi:</b></h5>
                     <blockquote class="generic-blockquote" style="text-align: justify">
-                        Seamlessly empower fully researched growth strategies and interoperable internal or “organic”
-                        sources. Credibly innovate granular internal or “organic” sources whereas high standards in
-                        web-readiness. Credibly innovate granular internal or organic sources whereas high standards in
-                        web-readiness. Energistically scale future-proof core competencies vis-a-vis impactful
-                        experiences. Dramatically synthesize integrated schemas. with optimal networks.
+                        Yang Akan Didapatkan:
+                            - 2 pcs Poster A5 (Art Carton 260, No Laminasi)
+                            - 6 pcs Photocard (Art Carton 260, Ukuran 5,5 x 8,5 cm, No Laminasi)
+                            - 8 pcs Garland + Tali (Art Carton 260, ukuran 10 x 15cm, No Laminasi)
+                            - 2 pcs Post Card (Art Carton 260, No Laminasi, Ukuran 10 x 15 cm)
+                            - 7 pcs Polaroid + Sign (Art Carton 260, No Laminasi, ukuran 6 x 9 cm)
+                            - 2 pcs Photostrip (Art Carton 260, No Laminasi, ukuran 5 x 15 cm)
                     </blockquote>
                     <div class="card_area">
                         <div class="product_count_area">
@@ -56,10 +59,9 @@
                                 <input class="product_count_item input-number" type="text" value="1" min="0" max="8">
                                 <span class="product_count_item number-increment"> <i class="ti-plus"></i></span>
                             </div>
-                            <p>$5</p>
                         </div>
                         <div class="add_to_cart" style="text-align: center">
-                            <a href="#" class="btn_3">add to cart</a>
+                            <a href="{{url('/cart')}}" class="btn_3">add to cart</a>
                         </div>
                     </div>
                 </div>

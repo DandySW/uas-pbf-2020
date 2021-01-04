@@ -49,7 +49,12 @@
                                 </li>
                                 <li>
                                     <div class="shopping-card">
-                                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                                        <a href="{{url('/cart')}}"><i class="fas fa-shopping-cart"></i></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="shopping-card">
+                                        <a href="{{url('/riwayat')}}"><i class="fas fa-history"></i></a>
                                     </div>
                                 </li>
                                 <li class="d-none d-lg-block"> <a href="{{url('/masuk')}}" class="btn header-btn">Sign in</a></li>

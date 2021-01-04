@@ -52,16 +52,18 @@
                 <!-- card one -->
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="row">
-                        <a href="#" class="col-xl-3 col-lg-3 col-md-6">
+                        <a href="{{url('/single')}}" class="col-xl-3 col-lg-3 col-md-6">
                             <div class="single-product mb-60">
                                 <div class="product-img">
-                                    <img src="{{ asset('customer/img/categori/product1.png') }}" alt="">
+                                    <img src="{{ asset('customer/img/product/reload1.png') }}" alt="">
                                 </div>
                                 <div class="product-caption">
-                                    <h4>Green Dress with details</h4>
+                                    <h4>NCT Dream Reload Version</h4>
+                                    {{-- !! Kategori --}}
+                                    <h5>Album</h5>
                                     <div class="price">
                                         <ul>
-                                            <li style="color: #ff003c">$40.00</li>
+                                            <li style="color: #ff003c">Rp 280000</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -70,13 +72,14 @@
                         <a href="#" class="col-xl-3 col-lg-3 col-md-6">
                             <div class="single-product mb-60">
                                 <div class="product-img">
-                                    <img src="{{ asset('customer/img/categori/product1.png') }}" alt="">
+                                    <img src="{{asset('customer/img/product/arrival.png') }}" alt="">
                                 </div>
                                 <div class="product-caption">
-                                    <h4>Green Dress with details</h4>
+                                    <h4>NCT 2020 Arrival Version Pt.2</h4>
+                                    <h5>Album</h5>
                                     <div class="price">
                                         <ul>
-                                            <li style="color: #ff003c">$40.00</li>
+                                            <li style="color: #ff003c">Rp 320000</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -85,13 +88,14 @@
                         <a href="#" class="col-xl-3 col-lg-3 col-md-6">
                             <div class="single-product mb-60">
                                 <div class="product-img">
-                                    <img src="{{ asset('customer/img/categori/product1.png') }}" alt="">
+                                    <img src="{{asset('customer/img/product/bp-ls.png') }}" alt="">
                                 </div>
                                 <div class="product-caption">
-                                    <h4>Green Dress with details</h4>
+                                    <h4>Blackpink lightstick ver 2</h4>
+                                    <h5>Lightstick</h5>
                                     <div class="price">
                                         <ul>
-                                            <li style="color: #ff003c">$40.00</li>
+                                            <li style="color: #ff003c">Rp 600000</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -100,13 +104,14 @@
                         <a href="#" class="col-xl-3 col-lg-3 col-md-6">
                             <div class="single-product mb-60">
                                 <div class="product-img">
-                                    <img src="{{ asset('customer/img/categori/product1.png') }}" alt="">
+                                    <img src="{{ asset('customer/img/product/nct-ls.png') }}" alt="">
                                 </div>
                                 <div class="product-caption">
-                                    <h4>Green Dress with details</h4>
+                                    <h4>NCT lightstick</h4>
+                                    <h5>Lightstick</h5>
                                     <div class="price">
                                         <ul>
-                                            <li style="color: #ff003c">$40.00</li>
+                                            <li style="color: #ff003c">Rp 600000</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -139,7 +144,7 @@
                                 Find The Best Product<br />
                                 from Our Shop
                             </h2>
-                            <p>Designers who are interesten creating state ofthe.</p>
+                            <p>100% produk dari Ktown4u,Gaho dan original</p>
                             <a href="#products" class="black-btn">Shop Now</a>
                         </div>
                     </div>
@@ -148,7 +153,7 @@
         </div>
         <!-- Shape -->
         <div class="shape bounce-animate d-none d-md-block">
-            <img src="{{ asset('customer/img/categori/card-shape.png') }}" alt="" />
+            <img src="{{ asset('customer/img/hero/bp1.png') }}" alt="" />
         </div>
     </div>
     <!-- Best Product End-->

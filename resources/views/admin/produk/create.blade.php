@@ -117,7 +117,7 @@
                                 </div>
                                 <fieldset class="form-group">
                                     <div class="row">
-                                        <label class="col-form-label col-sm-2 pt-0">Foto (max: 3MB)</label>
+                                        <label class="col-form-label col-sm-2 pt-0">Gambar (max: 3MB)</label>
                                         <div class="col-sm-10">
                                             <div class="form-group">
                                                 <input type="file"

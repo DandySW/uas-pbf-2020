@@ -28,7 +28,7 @@
                 <table class="table table-striped table-bordered zero-configuration">
                     <thead>
                         <tr class="text-center">
-                            <th scope="col">No</th>
+                            <th scope="col">ID</th>
                             <th scope="col">Nama Kategori</th>
                             <th scope="col">Slug</th>
                             <th scope="col">Status</th>
@@ -58,7 +58,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="staticBackdropLabel">Apakah anda yakin ingin
-                                            menghapus "{{ $category->cat_name }}" dari Rekap kategori?</h5>
+                                            menghapus "{{ $category->cat_name }}" dari Rekap Kategori?</h5>
                                     </div>
                                     <div class="modal-body">
                                         <strong>Perhatian!</strong> Data Kategori yang telah dihapus tidak dapat

@@ -46,10 +46,10 @@ class ProductController extends Controller
             [
                 'prod_name'     => 'required|unique:products|max:100',
                 'category_id'   => 'required',
-                'stock'         => 'required|numeric|digits_between:1,6',
-                'price'         => 'required|numeric|digits_between:1,11',
-                'weight'        => 'required|numeric|digits_between:1,6',
-                'description'   => 'required|max:65535',
+                'stock'         => 'required|numeric',
+                'price'         => 'required|numeric',
+                'weight'        => 'required|numeric',
+                'description'   => 'required',
                 'image'         => 'required|mimetypes:image/*|max:3000',
             ],
             [
@@ -59,15 +59,11 @@ class ProductController extends Controller
                 'category_id.required'   => 'Kategori harus dipilih',
                 'stock.required'         => 'Kolom harus diisi',
                 'stock.numeric'          => 'Hanya dapat diisi dengan angka',
-                'stock.digits_between'   => 'Maksimal 6 digit angka',
                 'price.required'         => 'Kolom harus diisi',
                 'price.numeric'          => 'Hanya dapat diisi dengan angka',
-                'price.digits_between'   => 'Maksimal 11 digit angka',
                 'weight.required'        => 'Kolom harus diisi',
                 'weight.numeric'         => 'Hanya dapat diisi dengan angka',
-                'weight.digits_between'  => 'Maksimal 6 digit angka',
                 'description.required'   => 'Kolom harus diisi',
-                'description.max'        => 'Maksimal 65.535 karakter',
                 'image.required'         => 'Harus ada gambar yang dipilih',
                 'image.mimetypes'        => 'Hanya dapat memilih gambar',
                 'image.max'              => 'Ukuran gambar maksimal 3MB',
@@ -80,7 +76,7 @@ class ProductController extends Controller
 
         $slug = 'product' . '-' . date('Ymd') . '_' . $prod_name;
         $imagename = $slug . '.' . strtolower($extension);
-        $imagepath = 'storage/products/' . $imagename;
+        $imagepath = 'products/' . $imagename;
         $image->storeAs('public/products', $imagename);
 
         $request['slug'] = $prod_name;
@@ -110,7 +106,9 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('admin.produk.edit');
+        $categories = Category::all();
+
+        return view('admin.produk.edit', compact('product', 'categories'));
     }
 
     /**
@@ -133,6 +131,8 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        Product::destroy($product->id);
+        Storage::delete('public/' . $product->image_path);
+        return redirect(url('admin/products'))->with('success', 'Data Produk berhasil dihapus');
     }
 }

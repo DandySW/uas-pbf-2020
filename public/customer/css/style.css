@@ -9094,7 +9094,7 @@ input:focus {
   font-weight: 400;
   margin-top: 22px;
   line-height: 1.5;
-  margin-bottom: 25px;
+  /* margin-bottom: 25px; */
   font-family: "Poppins", sans-serif;
 }
 

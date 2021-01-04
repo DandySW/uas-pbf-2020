@@ -44,10 +44,13 @@ Route::get('/product-list', function () {
     return view('customer.product-list');
 });
 Route::get('/contact', function () {
-    return view('customer.about');
+    return view('customer.contact');
 });
 Route::get('/cart', function () {
     return view('customer.cart');
+});
+Route::get('/checkout', function () {
+    return view('customer.checkout');
 });
 Route::get('/confirmation', function () {
     return view('customer.confirmation');

@@ -35,9 +35,6 @@
                             <div class="select_option_list">Category <i class="right fas fa-caret-down"></i> </div>
                             <div class="select_option_dropdown">
                                 <p><a href="#">Category 1</a></p>
-                                <p><a href="#">Category 2</a></p>
-                                <p><a href="#">Category 3</a></p>
-                                <p><a href="#">Category 4</a></p>
                             </div>
                         </div>
                     </div>
@@ -59,80 +56,52 @@
                     <div class="row">
                         <div class="col-lg-6 col-sm-6">
                             <div class="single_product_item">
-                                <img src="{{ asset('customer/img/categori/product6.png') }}" alt="" class="img-fluid">
-                                <h3> <a href="single-product.html">Cervical pillow for airplane
-                                        car office nap pillow</a> </h3>
-                                <p>From $5</p>
+                                <img src="{{ asset('customer/img/product/reload1.png') }}" alt="" class="img-fluid">
+                                <h3> <a href="{{url('/single')}}">NCT Dream Reload Version</a> </h3>
+                                <h5 style="color: grey">Album</h5>
+                                <p style="color:grey">Rp 280000</p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-6">
                             <div class="single_product_item">
-                                <img src="{{ asset('customer/img/categori/product2.png') }}" alt="" class="img-fluid">
-                                <h3> <a href="single-product.html">Geometric striped flower home classy decor</a> </h3>
-                                <p>From $5</p>
+                                <img src="{{ asset('customer/img/product/reload2.png') }}" alt="" class="img-fluid">
+                                <h3> <a href="{{url('/single')}}">NCT Dream Ridin Version</a> </h3>
+                                <h5 style="color: grey">Album</h5>
+                                <p style="color:grey">Rp 280000</p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-6">
                             <div class="single_product_item">
-                                <img src="{{ asset('customer/img/categori/product5.png') }}" alt="" class="img-fluid">
-                                <h3> <a href="single-product.html">Foam filling cotton slow rebound pillows</a> </h3>
-                                <p>From $5</p>
+                                <img src="{{ asset('customer/img/product/bp-ls.png') }}" alt="" class="img-fluid">
+                                <h3> <a href="{{url('/single')}}">Blackpink lightstick ver 2</a> </h3>
+                                <h5 style="color: grey">Lightstick</h5>
+                                <p style="color:grey">Rp 600000</p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-6">
                             <div class="single_product_item">
-                                <img src="{{ asset('customer/img/categori/product6.png') }}" alt="" class="img-fluid">
-                                <h3> <a href="single-product.html">Memory foam filling cotton Slow rebound pillows</a>
-                                </h3>
-                                <p>From $5</p>
+                                <img src="{{ asset('customer/img/product/nct-ls.png') }}" alt="" class="img-fluid">
+                                <h3> <a href="{{url('/single')}}">NCT Lightstick</a> </h3>
+                                <h5 style="color: grey">Lightstick</h5>
+                                <p style="color:grey">Rp 280000</p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-6">
                             <div class="single_product_item">
-                                <img src="{{ asset('customer/img/categori/product1.png') }}" alt="" class="img-fluid">
-                                <h3> <a href="single-product.html">Memory foam filling cotton Slow rebound pillows</a>
-                                </h3>
-                                <p>From $5</p>
+                                <img src="{{ asset('customer/img/product/exo-ls2.png') }}" alt="" class="img-fluid">
+                                <h3> <a href="{{url('/single')}}">EXO lightstick ver 2</a> </h3>
+                                <h5 style="color: grey">Lightstick</h5>
+                                <p style="color:grey">Rp 280000</p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-6">
                             <div class="single_product_item">
-                                <img src="{{ asset('customer/img/categori/product4.png') }}" alt="" class="img-fluid">
-                                <h3> <a href="single-product.html">Sleeping orthopedic sciatica Back Hip Joint Pain
-                                        relief</a> </h3>
-                                <p>From $5</p>
+                                <img src="{{ asset('customer/img/product/exo-ls3.png') }}" alt="" class="img-fluid">
+                                <h3> <a href="{{url('/single')}}">EXO lightstick ver 3</a> </h3>
+                                <h5 style="color: grey">Lightstick</h5>
+                                <p style="color:grey">Rp 280000</p>
                             </div>
                         </div>
-                        {{-- <div class="col-lg-6 col-sm-6">
-                            <div class="single_product_item">
-                                <img src="{{ asset('customer/img/categori/product5.png') }}" alt="" class="img-fluid">
-                                <h3> <a href="single-product.html">Memory foam filling cotton Slow rebound pillows</a>
-                                </h3>
-                                <p>From $5</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-sm-6">
-                            <div class="single_product_item">
-                                <img src="{{ asset('customer/img/categori/product3.png') }}" alt="" class="img-fluid">
-                                <h3> <a href="single-product.html">Sleeping orthopedic sciatica Back Hip Joint Pain
-                                        relief</a> </h3>
-                                <p>From $5</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-sm-6">
-                            <div class="single_product_item">
-                                <img src="{{ asset('customer/img/categori/product2.png') }}" alt="" class="img-fluid">
-                                <h3> <a href="single-product.html">Geometric striped flower home classy decor</a> </h3>
-                                <p>From $5</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-sm-6">
-                            <div class="single_product_item">
-                                <img src="{{ asset('customer/img/categori/product1.png') }}" alt="" class="img-fluid">
-                                <h3> <a href="single-product.html">Geometric striped flower home classy decor</a> </h3>
-                                <p>From $5</p>
-                            </div>
-                        </div> --}}
                     </div>
                     <div class="load_more_btn text-center">
                         <a href="#" class="btn_3">Load More</a>
@@ -142,43 +111,4 @@
         </div>
     </div>
 </section>
-<!-- product list part end-->
-
-<!-- client review part here -->
-{{-- <section class="client_review">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="client_review_slider owl-carousel">
-                    <div class="single_client_review">
-                        <div class="client_img">
-                            <img src="c{{ asset('ustomer/img/client.png') }}" alt="#">
-                        </div>
-                        <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help
-                            alleviate human suffering.</p>
-                        <h5>- Micky Mouse</h5>
-                    </div>
-                    <div class="single_client_review">
-                        <div class="client_img">
-                            <img src="{{ asset('customer/img/client_1.png') }}" alt="#">
-                        </div>
-                        <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help
-                            alleviate human suffering.</p>
-                        <h5>- Micky Mouse</h5>
-                    </div>
-                    <div class="single_client_review">
-                        <div class="client_img">
-                            <img src="{{ asset('customer/img/client_2.png') }}" alt="#">
-                        </div>
-                        <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help
-                            alleviate human suffering.</p>
-                        <h5>- Micky Mouse</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}
-<!-- client review part end -->
-
 @endsection

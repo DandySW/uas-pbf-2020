@@ -31,7 +31,14 @@
                                 <nav>
                                     <ul id="navigation">
                                         <li><a href="{{url('/')}}">Home</a></li>
-                                        <li><a href="{{url('/product-list')}}">Product List</a></li>
+                                        <li>
+                                            <a href="blog.html">Kategori</a>
+                                            <ul class="submenu">
+                                                @foreach ($categories as $category)
+                                                <li><a href="{{ url('#') }}">{{ $category->cat_name }}</a></li>
+                                                @endforeach
+                                            </ul>
+                                        </li>
                                         <li><a href="{{url('/contact')}}">Contact</a></li>
                                     </ul>
                                 </nav>
@@ -57,7 +64,11 @@
                                         <a href="{{url('/riwayat')}}"><i class="fas fa-history"></i></a>
                                     </div>
                                 </li>
+<<<<<<< HEAD
                                 <li class="d-none d-lg-block"> <a href="{{url('/login')}}" class="btn header-btn">Sign
+=======
+                                <li class="d-none d-lg-block"> <a href="{{url('/masuk')}}" class="btn header-btn">Sign
+>>>>>>> 6f0ea9ff9a78299521fc5a70e1786daa5cc1af6e
                                         in</a></li>
                             </ul>
                         </div>

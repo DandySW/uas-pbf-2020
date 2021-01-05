@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('customer.index');
-});
+Route::get('/', 'IndexController@index');
+Route::get('/category/{slug}', 'IndexController@category');
 Route::get('single-product', function () {
     return view('customer.single-product');
 });

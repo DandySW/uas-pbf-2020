@@ -171,7 +171,9 @@ class ProductController extends Controller
             $imagename = $slug . '.' . $extension;
             $imagepath = 'products/' . $imagename;
 
-            Storage::move('public/' . $old_image, 'public/' . $imagepath);
+            if ($old_image != $imagepath) {
+                Storage::move('public/' . $old_image, 'public/' . $imagepath);
+            }
         };
 
         $request['slug'] = $prod_name;

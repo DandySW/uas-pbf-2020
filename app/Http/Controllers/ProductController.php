@@ -180,7 +180,7 @@ class ProductController extends Controller
         $request['image_path'] = $imagepath;
 
         Product::where('id', $product->id)
-            ->update($request->except(['_method', '_token']));
+            ->update($request->except(['_method', '_token','image']));
 
         return redirect(url('admin/products'))->with('success', 'Data Produk berhasil diubah');
     }

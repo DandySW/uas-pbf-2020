@@ -22,9 +22,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('dashboard', function () {
         return view('admin.index');
     });
-    Route::get('view', function () {
-        return view('admin.view_customer');
-    });
+    Route::get('view', 'IndexController@view');
 
     // Grup Route Resource untuk Admin
     Route::resources([
@@ -33,15 +31,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     ]);
 });
 
-Route::get('/masuk', function () {
-    return view('customer.login');
-});
-Route::get('/product-list', function () {
-    return view('customer.product-list');
-});
-Route::get('/contact', function () {
-    return view('customer.contact');
-});
 Route::get('/cart', 'CartController@index');
 Route::get('/checkout', function () {
     return view('customer.checkout');
@@ -49,9 +38,9 @@ Route::get('/checkout', function () {
 Route::get('/confirmation', function () {
     return view('customer.confirmation');
 });
-Route::get('/single', function () {
-    return view('customer.single-product');
-});
 Route::get('/riwayat', function () {
     return view('customer.recently');
 });
+// Route::get('/admin/viewcus', function () {
+//     return view('admin.view_customer');
+// });

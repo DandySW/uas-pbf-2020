@@ -28,7 +28,7 @@
                 <table class="table table-striped table-bordered zero-configuration">
                     <thead>
                         <tr class="text-center">
-                            <th scope="col">ID</th>
+                            <th scope="col">No</th>
                             <th scope="col">Nama Produk</th>
                             <th scope="col">Slug</th>
                             <th scope="col">Kategori</th>
@@ -41,7 +41,7 @@
                     <tbody>
                         @foreach ($products as $product)
                         <tr>
-                            <th style="text-align: center; vertical-align: middle">{{ $product->id }}</th>
+                            <th style="text-align: center; vertical-align: middle">{{ $loop->iteration }}</th>
                             <td>{{ $product->prod_name }}</td>
                             <td>{{ $product->slug }}</td>
                             <td>{{ $product->category->cat_name }}</td>

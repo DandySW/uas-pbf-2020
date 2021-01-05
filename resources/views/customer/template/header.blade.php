@@ -57,7 +57,8 @@
                                         <a href="{{url('/riwayat')}}"><i class="fas fa-history"></i></a>
                                     </div>
                                 </li>
-                                <li class="d-none d-lg-block"> <a href="{{url('/masuk')}}" class="btn header-btn">Sign in</a></li>
+                                <li class="d-none d-lg-block"> <a href="{{url('/login')}}" class="btn header-btn">Sign
+                                        in</a></li>
                             </ul>
                         </div>
                         <!-- Mobile Menu -->

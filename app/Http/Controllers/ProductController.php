@@ -120,7 +120,67 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        if ($request->prod_name == $product->prod_name) {
+            $valid_name = 'required|max:100';
+        } else {
+            $valid_name = 'required|unique:products|max:100';
+        };
+        $request->validate(
+            [
+                'prod_name'     => $valid_name,
+                'category_id'   => 'required',
+                'stock'         => 'required|numeric',
+                'price'         => 'required|numeric',
+                'weight'        => 'required|numeric',
+                'description'   => 'required',
+                'image'         => 'mimetypes:image/*|max:3000',
+            ],
+            [
+                'prod_name.required'     => 'Kolom harus diisi',
+                'prod_name.unique'       => 'Nama produk sudah ada, silahkan menggunakan nama lain',
+                'prod_name.max'          => 'Nama produk maksimal 100 karakter',
+                'category_id.required'   => 'Kategori harus dipilih',
+                'stock.required'         => 'Kolom harus diisi',
+                'stock.numeric'          => 'Hanya dapat diisi dengan angka',
+                'price.required'         => 'Kolom harus diisi',
+                'price.numeric'          => 'Hanya dapat diisi dengan angka',
+                'weight.required'        => 'Kolom harus diisi',
+                'weight.numeric'         => 'Hanya dapat diisi dengan angka',
+                'description.required'   => 'Kolom harus diisi',
+                'image.mimetypes'        => 'Hanya dapat memilih gambar',
+                'image.max'              => 'Ukuran gambar maksimal 3MB',
+            ]
+        );
+
+
+        $prod_name = Str::slug($request->prod_name);
+        $slug = 'product' . '-' . date('Ymd') . '_' . $prod_name;
+        $old_image = $product->image_path;
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $extension = $image->getClientOriginalExtension();
+            $imagename = $slug . '.' . strtolower($extension);
+            $imagepath = 'products/' . $imagename;
+
+            Storage::delete('public/' . $old_image);
+            $image->storeAs('public/products', $imagename);
+        } else {
+            $image = pathinfo($old_image);
+            $extension = $image['extension'];
+            $imagename = $slug . '.' . $extension;
+            $imagepath = 'products/' . $imagename;
+
+            Storage::move('public/' . $old_image, 'public/' . $imagepath);
+        };
+
+        $request['slug'] = $prod_name;
+        $request['image_path'] = $imagepath;
+
+        Product::where('id', $product->id)
+            ->update($request->except(['_method', '_token']));
+
+        return redirect(url('admin/products'))->with('success', 'Data Produk berhasil diubah');
     }
 
     /**

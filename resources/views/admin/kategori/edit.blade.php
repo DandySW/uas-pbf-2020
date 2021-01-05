@@ -40,13 +40,10 @@
                                                 <select name="status"
                                                     class="custom-select mr-sm-2 @error('status') is-invalid @enderror"
                                                     id="inlineFormCustomSelect">
-                                                    @if ($category->status == 1)
-                                                    <option selected value="1">Aktif</option>
-                                                    <option value="0">Tidak Aktif</option>
-                                                    @else
-                                                    <option value="1">Aktif</option>
-                                                    <option selected value="0">Tidak Aktif</option>
-                                                    @endif
+                                                    <option value="1" {{ $category->status == 1 ? "selected":"" }}>
+                                                        Aktif </option>
+                                                    <option value="0" {{  $category->status == 0 ? "selected":""  }}>
+                                                        Tidak Aktif</option>
                                                 </select>
                                                 @error('status')
                                                 <div class="invalid-feedback">{{ $message }}</div>

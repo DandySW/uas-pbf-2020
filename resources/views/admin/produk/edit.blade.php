@@ -18,7 +18,9 @@
                     <div class="card-body">
                         <h2 class="card-title">Edit Produk</h2> <br>
                         <div class="basic-form">
-                            <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('products.update',$product->id) }}" method="POST"
+                                enctype="multipart/form-data">
+                                @method('PUT')
                                 @csrf
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label">Nama Produk</label>
@@ -39,10 +41,10 @@
                                                 <select name="category_id"
                                                     class="custom-select mr-sm-2 @error('category_id') is-invalid @enderror"
                                                     id="inlineFormCustomSelect">
-                                                    <option selected value="">Pilih Kategori</option>
                                                     @foreach ($categories as $category)
-                                                    <option value="{{ $category->id }}">{{ $category->cat_name }}
-                                                    </option>
+                                                    <option value="{{ $category->id }}"
+                                                        {{ $product->category_id == $category->id ? "selected":"" }}> {{
+                                                        $category->cat_name }} </option>
                                                     @endforeach
                                                 </select>
                                                 @error('category_id')
@@ -124,6 +126,8 @@
                                                 <input type="file"
                                                     class="form-control-file @error('image') is-invalid @enderror"
                                                     name="image" id="image" accept="image/*">
+                                                <a href="{{url('storage/'.$product->image_path)}}" target='_blank'>Lihat
+                                                    gambar saat ini</a>
                                                 @error('image')
                                                 <div class=" invalid-feedback">{{ $message }}</div>
                                                 @enderror

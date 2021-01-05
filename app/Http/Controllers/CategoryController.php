@@ -88,9 +88,14 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
+        if ($request->cat_name == $category->cat_name) {
+            $valid_name = 'required|max:30';
+        } else {
+            $valid_name = 'required|unique:categories|max:30';
+        };
         $request->validate(
             [
-                'cat_name'  => 'required|unique:categories|max:30',
+                'cat_name'  => $valid_name,
                 'status'    => 'required'
             ],
             [

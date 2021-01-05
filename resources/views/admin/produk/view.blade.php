@@ -46,7 +46,7 @@
                             <td>{{ $product->slug }}</td>
                             <td>{{ $product->category->cat_name }}</td>
                             <td class="text-center">{{ $product->stock }}</td>
-                            <td class="text-center">{{ $product->price }}</td>
+                            <td class="text-center">RP. {{ @rupiah($product->price) }}</td>
                             <td class="text-center">
                                 <button type="button" class="btn btn-primary" data-toggle="modal"
                                     data-target="#imageDescProduct{{ $product->id }}"> Lihat

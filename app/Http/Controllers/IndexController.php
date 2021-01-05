@@ -12,15 +12,22 @@ class IndexController extends Controller
     public function index()
     {
         $products = Product::all();
-        $categories = Category::all();
 
-        return view('customer.index', compact('products', 'categories'));
+        return view('customer.index', compact('products'));
     }
 
-    public function category()
+    public function detail($slug)
     {
-        $products = Product::all();
+        $product = Product::where('slug', $slug)->first();
 
-        return view('customer.bycategory', compact('products', 'categories'));
+        return view('customer.single-product', compact('product'));
     }
+
+    public function cart($slug)
+    {
+        $product = Product::where('slug', $slug)->first();
+
+        return view('customer.single-product', compact('product'));
+    }
+
 }

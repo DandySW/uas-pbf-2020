@@ -52,71 +52,26 @@
                 <!-- card one -->
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="row">
-                        <a href="{{url('/single')}}" class="col-xl-3 col-lg-3 col-md-6">
-                            <div class="single-product mb-60">
-                                <div class="product-img">
-                                    <img src="{{ asset('customer/img/product/reload1.png') }}" alt="">
-                                </div>
-                                <div class="product-caption">
-                                    <h4>NCT Dream Reload Version</h4>
-                                    {{-- !! Kategori --}}
-                                    <h5>Album</h5>
-                                    <div class="price">
-                                        <ul>
-                                            <li style="color: #ff003c">Rp 280000</li>
-                                        </ul>
+                        @foreach ($products as $product)
+                            <a href="{{url('product/'.$product->slug)}}" class="col-xl-3 col-lg-3 col-md-6">
+                                <div class="single-product mb-60">
+                                    <div class="product-img">
+                                        <img src="{{ asset('storage/'.$product->image_path) }}"
+                                        alt="{{ $product->prod_name }}" style="width: 100%">
+                                    </div>
+                                    <div class="product-caption">
+                                        <h4>{{$product->prod_name}}</h4>
+                                        {{-- !! Kategori --}}
+                                        <h5>{{ $product->category->cat_name }}</h5>
+                                        <div class="price">
+                                            <ul>
+                                                <li style="color: #ff003c">Rp {{ @rupiah($product->price) }}</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
-                        <a href="#" class="col-xl-3 col-lg-3 col-md-6">
-                            <div class="single-product mb-60">
-                                <div class="product-img">
-                                    <img src="{{asset('customer/img/product/arrival.png') }}" alt="">
-                                </div>
-                                <div class="product-caption">
-                                    <h4>NCT 2020 Arrival Version Pt.2</h4>
-                                    <h5>Album</h5>
-                                    <div class="price">
-                                        <ul>
-                                            <li style="color: #ff003c">Rp 320000</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="col-xl-3 col-lg-3 col-md-6">
-                            <div class="single-product mb-60">
-                                <div class="product-img">
-                                    <img src="{{asset('customer/img/product/bp-ls.png') }}" alt="">
-                                </div>
-                                <div class="product-caption">
-                                    <h4>Blackpink lightstick ver 2</h4>
-                                    <h5>Lightstick</h5>
-                                    <div class="price">
-                                        <ul>
-                                            <li style="color: #ff003c">Rp 600000</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="col-xl-3 col-lg-3 col-md-6">
-                            <div class="single-product mb-60">
-                                <div class="product-img">
-                                    <img src="{{ asset('customer/img/product/nct-ls.png') }}" alt="">
-                                </div>
-                                <div class="product-caption">
-                                    <h4>NCT lightstick</h4>
-                                    <h5>Lightstick</h5>
-                                    <div class="price">
-                                        <ul>
-                                            <li style="color: #ff003c">Rp 600000</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                            </a>
+                        @endforeach
                     </div>
                 </div>
             </div>

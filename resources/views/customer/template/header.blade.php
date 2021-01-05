@@ -29,18 +29,18 @@
                             <!-- Main-menu -->
                             <div class="main-menu f-right d-none d-lg-block">
                                 <nav>
-                                    <ul id="navigation">
+                                    {{-- <ul id="navigation">
                                         <li><a href="{{url('/')}}">Home</a></li>
-                                        <li>
-                                            <a href="blog.html">Kategori</a>
-                                            <ul class="submenu">
-                                                @foreach ($categories as $category)
-                                                <li><a href="{{ url('#') }}">{{ $category->cat_name }}</a></li>
-                                                @endforeach
-                                            </ul>
-                                        </li>
-                                        <li><a href="{{url('/contact')}}">Contact</a></li>
-                                    </ul>
+                                    <li>
+                                        <a href="blog.html">Kategori</a>
+                                        <ul class="submenu">
+                                            @foreach ($categories as $category)
+                                            <li><a href="{{ url('#') }}">{{ $category->cat_name }}</a></li>
+                                            @endforeach
+                                        </ul>
+                                    </li>
+                                    <li><a href="{{url('/contact')}}">Contact</a></li>
+                                    </ul> --}}
                                 </nav>
                             </div>
                         </div>

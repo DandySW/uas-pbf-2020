@@ -20,7 +20,6 @@ class IndexController extends Controller
     public function category()
     {
         $products = Product::all();
-        $categories = Category::all();
 
         return view('customer.bycategory', compact('products', 'categories'));
     }

@@ -28,7 +28,7 @@
                 <table class="table table-striped table-bordered zero-configuration">
                     <thead>
                         <tr class="text-center">
-                            <th scope="col">ID</th>
+                            <th scope="col">No</th>
                             <th scope="col">Nama Kategori</th>
                             <th scope="col">Slug</th>
                             <th scope="col">Status</th>
@@ -38,7 +38,7 @@
                     <tbody>
                         @foreach ($categories as $category)
                         <tr>
-                            <th style="text-align: center">{{ $category->id }}</th>
+                            <th style="text-align: center">{{ $loop->iteration }}</th>
                             <td>{{ $category->cat_name }}</td>
                             <td>{{ $category->slug }}</td>
                             <td>{{ $category->status == 1 ? 'Aktif' : 'Tidak Aktif' }}</td>

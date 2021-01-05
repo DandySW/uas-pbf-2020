@@ -50,7 +50,7 @@ class ProductController extends Controller
                 'price'         => 'required|numeric',
                 'weight'        => 'required|numeric',
                 'description'   => 'required',
-                'image'         => 'required|mimetypes:image/*|max:3000',
+                'image'         => 'required|mimetypes:image/*|max:1000',
             ],
             [
                 'prod_name.required'     => 'Kolom harus diisi',
@@ -66,7 +66,7 @@ class ProductController extends Controller
                 'description.required'   => 'Kolom harus diisi',
                 'image.required'         => 'Harus ada gambar yang dipilih',
                 'image.mimetypes'        => 'Hanya dapat memilih gambar',
-                'image.max'              => 'Ukuran gambar maksimal 3MB',
+                'image.max'              => 'Ukuran gambar maksimal 1MB',
             ]
         );
 
@@ -133,7 +133,7 @@ class ProductController extends Controller
                 'price'         => 'required|numeric',
                 'weight'        => 'required|numeric',
                 'description'   => 'required',
-                'image'         => 'mimetypes:image/*|max:3000',
+                'image'         => 'mimetypes:image/*|max:1000',
             ],
             [
                 'prod_name.required'     => 'Kolom harus diisi',
@@ -148,7 +148,7 @@ class ProductController extends Controller
                 'weight.numeric'         => 'Hanya dapat diisi dengan angka',
                 'description.required'   => 'Kolom harus diisi',
                 'image.mimetypes'        => 'Hanya dapat memilih gambar',
-                'image.max'              => 'Ukuran gambar maksimal 3MB',
+                'image.max'              => 'Ukuran gambar maksimal 1MB',
             ]
         );
 

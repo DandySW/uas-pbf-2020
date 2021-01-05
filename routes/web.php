@@ -21,7 +21,7 @@ Route::get('single-product', function () {
 Auth::routes();
 
 // Kumpulan Route Admin
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('dashboard', function () {
         return view('admin.index');
     });

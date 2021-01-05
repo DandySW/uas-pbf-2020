@@ -26,80 +26,53 @@
         <table class="table">
           <thead>
             <tr>
-              <th scope="col">Product</th>
-              <th scope="col">Price</th>
-              <th scope="col">Quantity</th>
-              <th scope="col">Total</th>
+              <th scope="col"><p>Product</p></th>
+              <th scope="col"><p>Price</p></th>
+              <th scope="col"><p>Quantity</p></th>
+              <th scope="col"><p>Total</p></th>
             </tr>
           </thead>
           <tbody>
             <tr>
+              @foreach ($carts as $cart)
               <td>
                 <div class="media">
                   <div class="d-flex">
-                    <img src="{{ asset('customer/img/product/reload1.png') }}" alt="" />
+                    <img src="{{asset('storage/'.$cart->product->image_path)}}" alt="" />
                   </div>
                   <div class="media-body">
-                    <p><a href="{{url('/single')}}" style="color: grey">NCT Dream Reload Version</a></p>
+                    <p><a href="{{url('product/'.$cart->product->slug)}}" style="color: grey">{{$cart->product->prod_name}}</a></p>
                   </div>
                 </div>
               </td>
               <td>
-                <h5>Rp 280000</h5>
+                <p>Rp {{@rupiah($cart->product->price)}}</p>
               </td>
               <td>
-                <div class="product_count">
-                  <span class="input-number-decrement"> <i class="ti-minus"></i></span>
-                  <input class="input-number" type="text" value="1" min="0" max="10">
-                  <span class="input-number-increment"> <i class="ti-plus"></i></span>
-                </div>
+                <p>{{$cart->quantity}}</p>
               </td>
               <td>
-                <h5>Rp. total</h5>
+                <p>Rp. {{@rupiah($cart->quantity*$cart->product->price)}}</p>
               </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="media">
-                  <div class="d-flex">
-                    <img src="{{ asset('customer/img/arrivel/arrivel_2.png') }}" alt="" />
-                  </div>
-                  <div class="media-body">
-                    <p>Blackpink Lightstick ver 2</p>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <h5>Rp 600000</h5>
-              </td>
-              <td>
-                <div class="product_count">
-                  <span class="input-number-decrement"> <i class="ti-minus"></i></span>
-                  <input class="input-number" type="text" value="1" min="0" max="10">
-                  <span class="input-number-increment"> <i class="ti-plus"></i></span>
-                </div>
-              </td>
-              <td>
-                <h5>Rp total</h5>
-              </td>
+              @endforeach
             </tr>
               <td></td>
               <td></td>
               <td>
-                <h5>Jumlah harga</h5>
+                <p>Jumlah harga</p>
               </td>
               <td>
-                <h5>Rp jumlah</h5>
+                <p>Rp jumlah</p>
               </td>
             </tr>
             <tr class="shipping_area">
               <td></td>
               <td></td>
               <td>
-                <h5>Pengiriman </h5>
+                <p>Pengiriman </p>
               </td>
               <td>
-                <h5>Rp ongkir</h5><br>
+                <p>Rp ongkir</p><br>
                 <div class="shipping_box">
                 </div>
               </td>
@@ -107,7 +80,7 @@
           </tbody>
         </table>
         <div class="checkout_btn_inner float-right">
-          <a class="btn_1" href="#">Continue Shopping</a>
+          <a class="btn_1" href="#">Lanjutkan belanja</a>
           <a class="btn_1 checkout_btn_1" href="{{url('/checkout')}}">Checkout</a>
           {{-- !! DAN TAMBAH VALIDASI KALO BUKAN USER DAKBISA LANJUT YAA --}}
         </div>

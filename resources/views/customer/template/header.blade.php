@@ -21,8 +21,8 @@
                         <!-- Logo -->
                         <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
                             <div class="logo">
-                                <a href="#"><img src="{{ asset('customer/img/LOGO KSHOP.png') }}" alt="logo kshop"
-                                        height="110" width="130"></a>
+                                <a href="{{url('/')}}"><img src="{{ asset('customer/img/LOGO KSHOP.png') }}"
+                                        alt="logo kshop" height="110" width="130"></a>
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-8 col-md-7 col-sm-5">
@@ -64,8 +64,20 @@
                                         <a href="{{url('/riwayat')}}"><i class="fas fa-history"></i></a>
                                     </div>
                                 </li>
+                                @if (Auth::check())
+                                <form action="{{route('logout')}}" method="post">
+                                    @csrf
+                                    <ul>
+                                        <li><button type="submit" class="btn mb-1 btn-primary"><i class="icon-key"></i>
+                                                <span>Logout</span></button>
+                                        </li>
+                                    </ul>
+                                </form>
+                                @else
                                 <li class="d-none d-lg-block"> <a href="{{url('/login')}}" class="btn header-btn">Sign
                                         in</a></li>
+
+                                @endif
                             </ul>
                         </div>
                         <!-- Mobile Menu -->

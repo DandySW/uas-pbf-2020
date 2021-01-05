@@ -26,9 +26,9 @@
                 <div class="login_part_text text-center">
                     <div class="login_part_text_iner">
                         <h2>Account </h2>
-                        <p>Username admin: </p>
-                        <p>Password admin: </p>
-                        <a href="#" class="btn_3">Create an Account</a>
+                        <p>Email admin: admin@kshop.com</p>
+                        <p>Password admin: password</p>
+                        <a href="{{url('/register')}}" class="btn_3">Create an Account</a>
                     </div>
                 </div>
             </div>
@@ -37,9 +37,11 @@
                     <div class="login_part_form_iner">
                         <h3>Welcome Back ! <br>
                             Please Sign in now</h3>
-                        <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                        <form class="row contact_form" action="{{route('login')}}" method="post"
+                            novalidate="novalidate">
+                            @csrf
                             <div class="col-md-12 form-group p_star">
-                                <input type="text" class="form-control" id="name" name="name" value=""
+                                <input type="text" class="form-control" id="name" name="email" value=""
                                     placeholder="Username">
                             </div>
                             <div class="col-md-12 form-group p_star">
@@ -54,7 +56,6 @@
                                 <button type="submit" value="submit" class="btn_3">
                                     log in
                                 </button>
-                                <a class="lost_pass" href="#">forget password?</a>
                             </div>
                         </form>
                     </div>

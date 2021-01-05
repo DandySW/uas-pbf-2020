@@ -45,22 +45,27 @@
             <div class="header-right">
                 <ul class="clearfix">
                     <li class="icons dropdown">
-                        <div class="user-img c-pointer position-relative" data-toggle="dropdown">
+                        {{-- <div class="user-img c-pointer position-relative" data-toggle="dropdown">
                             <span class="activity active"></span>
                             <img src="{{asset('admin/images/user/1.png')}}" height="40" width="40" alt="">
-                        </div>
-                        <div class="drop-down dropdown-profile animated fadeIn dropdown-menu">
-                            <div class="dropdown-content-body">
-                                <ul>
-                                    <li><a href="page-login.html"><i class="icon-key"></i> <span>Logout</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+            </div> --}}
+            <div class="user-img c-pointer position-relative">
+                <div class="dropdown-content-body">
+                    <form action="{{route('logout')}}" method="post">
+                        @csrf
+                        <ul>
+                            <li><button type="submit" class="btn mb-1 btn-primary"><i class="icon-key"></i>
+                                    <span>Logout</span></button>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
             </div>
+            </li>
+            </ul>
         </div>
     </div>
-    <!--**********************************
+</div>
+<!--**********************************
             Header end ti-comment-alt
         ***********************************-->

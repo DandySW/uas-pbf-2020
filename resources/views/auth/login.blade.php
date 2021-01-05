@@ -25,9 +25,11 @@
             <div class="col-lg-6 col-md-6">
                 <div class="login_part_text text-center">
                     <div class="login_part_text_iner">
-                        <h2>Account </h2>
-                        <p>Email admin: admin@kshop.com</p>
-                        <p>Password admin: password</p>
+                        <h2> <b style="color: white"></b> ACCOUNT </h2>
+                        <p>Email admin : <b style="color: white">admin@kshop.com</b></p>
+                        <p>Password admin : <b style="color: white">password</b> </p><br>
+                        <p>Email customer : <b style="color: white">demo@gmail.com</b></p>
+                        <p>Password customer : <b style="color: white">123456</b></p>
                         <a href="{{url('/register')}}" class="btn_3">Create an Account</a>
                     </div>
                 </div>

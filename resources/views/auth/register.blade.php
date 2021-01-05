@@ -33,7 +33,9 @@
                 <div class="login_part_form">
                     <div class="login_part_form_iner">
                         <h3>Register Now ! </h3>
-                        <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                        <form class="row contact_form" action="{{route('register')}}" method="post"
+                            novalidate="novalidate">
+                            @csrf
                             <div class="col-md-12 form-group p_star">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
                                     name="name" value="{{ old('name') }}" placeholder="Nama" required
@@ -50,6 +52,17 @@
                                     autocomplete="email">
 
                                 @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                            <div class="col-md-12 form-group p_star">
+                                <input id="address" type="text"
+                                    class="form-control @error('address') is-invalid @enderror" name="address"
+                                    value="{{ old('address') }}" placeholder="Alamat" required autocomplete="address"
+                                    autofocus>
+                                @error('address')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

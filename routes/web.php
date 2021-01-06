@@ -11,12 +11,17 @@
 |
 */
 
+Auth::routes();
 Route::get('/', 'CustomerController@index');
-Route::get('/product/{slug}', 'CustomerController@detailprod');
+Route::get('product/{slug}', 'CustomerController@detailprod');
+Route::get('mycart', 'CartController@index');
 
 //CUSTOMER
 Route::group(['middleware' => ['auth']], function () {
-    #code here
+    Route::post('mycart', 'CartController@addtocart')->name('mycart.addtocart');
+    Route::delete('mycart/{id}', 'CartController@destroy')->name('mycart.destroy');
+    Route::put('mycart/{id}', 'CartController@plusminus')->name('mycart.plusminus');
+    // Route::patch('mycart/{id}', 'CartController@minuscart')->name('mycart.minuscart');
 });
 
 //ADMIN
@@ -30,7 +35,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function 
     ]);
 });
 
-Route::get('/cart', 'CartController@index');
 Route::get('/checkout', function () {
     return view('customer.checkout');
 });
@@ -40,5 +44,3 @@ Route::get('/confirmation', function () {
 Route::get('/riwayat', function () {
     return view('customer.recently');
 });
-
-Auth::routes();

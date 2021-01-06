@@ -53,24 +53,24 @@
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="row">
                         @foreach ($products as $product)
-                            <a href="{{url('product/'.$product->slug)}}" class="col-xl-3 col-lg-3 col-md-6">
-                                <div class="single-product mb-60">
-                                    <div class="product-img">
-                                        <img src="{{ asset('storage/'.$product->image_path) }}"
+                        <a href="{{url('product/'.$product->slug)}}" class="col-xl-3 col-lg-3 col-md-6">
+                            <div class="single-product mb-60">
+                                <div class="product-img">
+                                    <img src="{{ asset('storage/'.$product->image_path) }}"
                                         alt="{{ $product->prod_name }}" style="width: 100%">
-                                    </div>
-                                    <div class="product-caption">
-                                        <h4>{{$product->prod_name}}</h4>
-                                        {{-- !! Kategori --}}
-                                        <h5>{{ $product->category->cat_name }}</h5>
-                                        <div class="price">
-                                            <ul>
-                                                <li style="color: #ff003c">Rp {{ @rupiah($product->price) }}</li>
-                                            </ul>
-                                        </div>
+                                </div>
+                                <div class="product-caption">
+                                    <h4>{{$product->prod_name}}</h4>
+                                    {{-- !! Kategori --}}
+                                    <h5>{{ $product->category->cat_name }}</h5>
+                                    <div class="price">
+                                        <ul>
+                                            <li style="color: #ff003c">Rp {{ @rupiah($product->price) }}</li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
+                        </a>
                         @endforeach
                     </div>
                 </div>

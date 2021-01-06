@@ -56,7 +56,7 @@
                                 </li>
                                 <li>
                                     <div class="shopping-card">
-                                        <a href="{{url('/cart')}}"><i class="fas fa-shopping-cart"></i></a>
+                                        <a href="{{url('/mycart')}}"><i class="fas fa-shopping-cart"></i></a>
                                     </div>
                                 </li>
                                 <li>

@@ -20,6 +20,6 @@ class Admin
             return $next($request);
         }
 
-        return redirect('/salah');
+        return abort(403);
     }
 }

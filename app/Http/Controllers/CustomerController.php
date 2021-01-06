@@ -21,11 +21,4 @@ class CustomerController extends Controller
 
         return view('customer.single-product', compact('product'));
     }
-
-    public function cart($slug)
-    {
-        $product = Product::where('slug', $slug)->first();
-
-        return view('customer.single-product', compact('product'));
-    }
 }

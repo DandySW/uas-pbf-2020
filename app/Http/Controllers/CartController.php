@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Cart;
+use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,18 +17,14 @@ class CartController extends Controller
     public function index()
     {
         $carts = Cart::where('user_id', Auth::id())->get();
-        // return Auth::id();
-        return view('customer.cart', compact('carts'));
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $total_price = 0;
+        foreach ($carts as $cart) {
+            $product = Product::findOrFail($cart->product_id);
+            $total_price += ($cart->quantity * $product->price);
+        }
+
+        return view('customer.cart', compact('carts', 'total_price'));
     }
 
     /**
@@ -36,53 +33,51 @@ class CartController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function addtocart(Request $request)
     {
-        //
-    }
+        $request['user_id'] = Auth::id();
+        $cart = Cart::where('user_id', Auth::id())->where('product_id', $request->product_id)->first();
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Cart  $cart
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Cart $cart)
-    {
-        //
-    }
+        if ($cart == NULL) {
+            Cart::create($request->all());
+        } else {
+            $new_quantity = $cart->quantity + $request->quantity;
+            $cart->update(['quantity' => $new_quantity]);
+        };
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Cart  $cart
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Cart $cart)
-    {
-        //
+
+        return back()->with('success', 'Produk berhasil dimasukkan ke dalam keranjang.');
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Cart  $cart
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cart $cart)
+    public function plusminus(Request $request, $id)
     {
-        //
+        $cart = Cart::findOrFail($id);
+        if ($cart->quantity < $request->quantity) {
+            $cart->update(['quantity' => $request->quantity]);
+            return redirect(url('mycart'))->with('success', 'Jumlah produk berhasil ditambah.');
+        } else {
+            $cart->update(['quantity' => $request->quantity]);
+            return redirect(url('mycart'))->with('success', 'Jumlah produk berhasil dikurangi.');
+        };
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Cart  $cart
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cart $cart)
+    public function destroy($id)
     {
-        //
+        Cart::destroy($id);
+
+        return redirect(url('mycart'))->with('success', 'Produk berhasil dihapus dari keranjang.');
     }
 }

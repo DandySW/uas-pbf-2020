@@ -18,9 +18,18 @@
 </div>
 <!-- slider Area End-->
 
+
 <!--================Single Product Area =================-->
-<div class="product_image_area">
+<div class="product_image_area">>
     <div class="container">
+
+        @if (session('success'))
+        <div class="alert alert-primary alert-dismissible fade show">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                    aria-hidden="true">×</span>
+            </button> {{ session('success') }} <a href="{{ url('mycart') }}" class="alert-link">Cek sekarang</a>.</div>
+        @endif
+
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="product_img_slide owl-carousel">
@@ -31,31 +40,36 @@
             </div>
             <div class="col-lg-6">
                 <div class="single_product_text text-left">
-                        <h3 style="text-align: center">{{$product->prod_name}}</h3>
-                        <h5><b>Kategori:</b> {{$product->category->cat_name}}</h5>
-                        <h5><b>Stok:</b> {{$product->stock}}</h5>
-                        <h5><b>Harga:</b>  Rp. {{@rupiah($product->price) }}</h5>
-                        <h5><b>Deskripsi:</b></h5>
-                        <blockquote class="generic-blockquote" style="text-align: justify">
-                            <p>{!! $product->description !!}</p>
-                        </blockquote>
-                        <div class="card_area">
+                    <h3 style="text-align: center">{{$product->prod_name}}</h3>
+                    <h5><b>Kategori:</b> {{$product->category->cat_name}}</h5>
+                    <h5><b>Stok:</b> {{$product->stock}}</h5>
+                    <h5><b>Harga:</b> Rp. {{@rupiah($product->price) }}</h5>
+                    <h5><b>Deskripsi:</b></h5>
+                    <blockquote class="generic-blockquote" style="text-align: justify">
+                        <p>{!! $product->description !!}</p>
+                    </blockquote>
+                    <div class="card_area">
+                        <form action="{{ route('mycart.addtocart') }}" method="post">
+                            @csrf
+                            <input type="hidden" name="product_id" value="{{ $product->id }}">
                             <div class="product_count_area">
-                                <p>Quantity</p>
+                                <p>Jumlah</p>
                                 <div class="product_count d-inline-block">
                                     <span class="product_count_item inumber-decrement"> <i class="ti-minus"></i></span>
-                                    <input class="product_count_item input-number" type="text" value="1" min="0" max="8">
+                                    <input class="product_count_item input-number" name="quantity" type="text" value="1"
+                                        min="1" max="{{ $product->stock }}" readonly>
                                     <span class="product_count_item number-increment"> <i class="ti-plus"></i></span>
                                 </div>
                             </div>
                             <div class="add_to_cart" style="text-align: center">
-                                <a href="{{url('/cart')}}" class="btn_3">add to cart</a>
-                            </div>
-                        </div>
+                                <button type="submit" class="btn_3">Tambah ke dalam Keranjang</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 <!--================End Single Product Area =================-->
 <!-- subscribe part here -->

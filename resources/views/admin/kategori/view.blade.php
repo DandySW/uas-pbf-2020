@@ -31,17 +31,15 @@
                             <th scope="col">No</th>
                             <th scope="col">Nama Kategori</th>
                             <th scope="col">Slug</th>
-                            <th scope="col">Status</th>
                             <th scope="col">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($categories as $category)
                         <tr>
-                            <th style="text-align: center">{{ $loop->iteration }}</th>
+                            <td style="text-align: center">{{ $loop->iteration }}</td>
                             <td>{{ $category->cat_name }}</td>
                             <td>{{ $category->slug }}</td>
-                            <td>{{ $category->status == 1 ? 'Aktif' : 'Tidak Aktif' }}</td>
                             <td class="text-center">
                                 <a href="{{ route('categories.edit', $category->id) }}" type="button"
                                     class="btn mb-1 btn-rounded btn-info">Edit</a>

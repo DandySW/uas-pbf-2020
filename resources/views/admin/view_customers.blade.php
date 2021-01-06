@@ -1,5 +1,5 @@
 @extends('admin.template.master')
-@section('content')     
+@section('content')
 <div class="content-body">
 
     <div class="row page-titles mx-0">
@@ -20,7 +20,8 @@
                         <div class="table-responsive">
                             <table class="table table-striped table-bordered zero-configuration">
                                 <thead>
-                                    <tr>
+                                    <tr class="text-center">
+                                        <th>No</th>
                                         <th>Nama Lengkap</th>
                                         <th>Email</th>
                                         <th>Alamat</th>
@@ -30,10 +31,12 @@
                                 <tbody>
                                     @foreach ($users as $user)
                                     <tr>
+                                        <td style="text-align: center">{{ $loop->iteration }}</td>
                                         <td>{{$user->name}}</td>
                                         <td>{{$user->email}}</td>
-                                        <td>{{$user->address}}</td>
-                                        <td>083875684834</td>
+                                        <td>{{$user->address}}, {{ $user->city->city_name }},
+                                            {{ $user->city->province->prov_name }} {{ $user->postcode }}</td>
+                                        <td style="text-align: center">{{ $user->phone_number }}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>

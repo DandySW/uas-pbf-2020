@@ -95,7 +95,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('admin.produk.detail');
+        return redirect(url('admin/categories'))->with('warning', 'Mohon maaf halaman yang anda cari tidak ada');
     }
 
     /**

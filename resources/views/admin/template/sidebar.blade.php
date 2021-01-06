@@ -12,7 +12,7 @@
             </li>
             <li class="nav-label">User</li>
             <li>
-                <a href="{{url('/admin/view')}}" aria-activedescendant="false">
+                <a href="{{url('/admin/view-customers')}}" aria-activedescendant="false">
                     <i class="icon-people menu-icon"></i><span class="nav-text">Rekap Customer</span>
                 </a>
             </li>

@@ -41,7 +41,7 @@
                     <tbody>
                         @foreach ($products as $product)
                         <tr>
-                            <th style="text-align: center; vertical-align: middle">{{ $loop->iteration }}</th>
+                            <td style="text-align: center; vertical-align: middle">{{ $loop->iteration }}</td>
                             <td>{{ $product->prod_name }}</td>
                             <td>{{ $product->slug }}</td>
                             <td>{{ $product->category->cat_name }}</td>

@@ -15,7 +15,7 @@ class ModifyColumnsInUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('gender');
-            $table->string('phone_number')->after('postcode');
+            $table->string('phone_number', 13)->nullable()->after('postcode');
         });
     }
 

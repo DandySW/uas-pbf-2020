@@ -11,20 +11,19 @@
 |
 */
 
-Route::get('/', 'IndexController@index');
-Route::get('/product/{slug}', 'IndexController@detail');
+Route::get('/', 'CustomerController@index');
+Route::get('/product/{slug}', 'CustomerController@detailprod');
 
+//CUSTOMER
+Route::group(['middleware' => ['auth']], function () {
+    #code here
+});
 
-Auth::routes();
+//ADMIN
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function () {
+    Route::get('dashboard', 'AdminController@index');
+    Route::get('view-customers', 'AdminController@customers');
 
-// Kumpulan Route Admin
-Route::group(['prefix' => 'admin'], function () {
-    Route::get('dashboard', function () {
-        return view('admin.index');
-    });
-    Route::get('view', 'IndexController@view');
-
-    // Grup Route Resource untuk Admin
     Route::resources([
         'categories' => 'CategoryController',
         'products' => 'ProductController'
@@ -41,6 +40,5 @@ Route::get('/confirmation', function () {
 Route::get('/riwayat', function () {
     return view('customer.recently');
 });
-// Route::get('/admin/viewcus', function () {
-//     return view('admin.view_customer');
-// });
+
+Auth::routes();

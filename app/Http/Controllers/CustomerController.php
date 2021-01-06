@@ -3,12 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Product;
-use App\Category;
-use App\User;
 
 use Illuminate\Http\Request;
 
-class IndexController extends Controller
+class CustomerController extends Controller
 {
     public function index()
     {
@@ -17,7 +15,7 @@ class IndexController extends Controller
         return view('customer.index', compact('products'));
     }
 
-    public function detail($slug)
+    public function detailprod($slug)
     {
         $product = Product::where('slug', $slug)->first();
 
@@ -30,12 +28,4 @@ class IndexController extends Controller
 
         return view('customer.single-product', compact('product'));
     }
-
-    public function view()
-    {
-        $users = User::all();
-
-        return view('admin.view_customer', compact('users'));
-    }
-
 }

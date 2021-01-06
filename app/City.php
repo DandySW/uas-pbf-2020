@@ -11,4 +11,9 @@ class City extends Model
     ];
 
     public $timestamps = false;
+
+    public function province()
+    {
+        return $this->belongsTo('App\Province');
+    }
 }

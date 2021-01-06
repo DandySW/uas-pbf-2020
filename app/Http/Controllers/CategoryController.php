@@ -41,13 +41,11 @@ class CategoryController extends Controller
         $request->validate(
             [
                 'cat_name'  => 'required|unique:categories|max:30',
-                'status'    => 'required'
             ],
             [
                 'cat_name.required' => 'Kolom harus diisi',
                 'cat_name.unique'   => 'Kategori sudah ada, silahkan membuat kategori lain',
                 'cat_name.max'      => 'Kategori maksimal 30 karakter',
-                'status.required'   => 'Status harus dipilih'
             ]
         );
 
@@ -96,13 +94,11 @@ class CategoryController extends Controller
         $request->validate(
             [
                 'cat_name'  => $valid_name,
-                'status'    => 'required'
             ],
             [
                 'cat_name.required' => 'Kolom harus diisi',
                 'cat_name.unique'   => 'Kategori sudah ada, silahkan membuat kategori lain',
                 'cat_name.max'      => 'Kategori maksimal 30 karakter',
-                'status.required'   => 'Status harus dipilih'
             ]
         );
 

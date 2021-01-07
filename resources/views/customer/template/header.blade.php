@@ -50,14 +50,6 @@ $categories = App\Category::all();
                         </div>
                         <div class="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
                             <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between">
-                                <li class="d-none d-xl-block">
-                                    <div class="form-box f-right ">
-                                        <input type="text" name="Search" placeholder="Search products">
-                                        <div class="search-icon">
-                                            <i class="fas fa-search special-tag"></i>
-                                        </div>
-                                    </div>
-                                </li>
                                 <li>
                                     <div class="shopping-card">
                                         <a href="{{url('/mycart')}}"><i class="fas fa-shopping-cart"></i></a>

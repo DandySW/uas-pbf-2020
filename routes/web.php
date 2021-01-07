@@ -14,7 +14,10 @@
 Auth::routes();
 Route::get('/', 'CustomerController@index');
 Route::get('product/{slug}', 'CustomerController@detailprod');
+Route::get('blog/{slug}', 'CustomerController@detailblog');
 Route::get('mycart', 'CartController@index');
+Route::get('/blog', 'CustomerController@blog');
+
 
 //CUSTOMER
 Route::group(['middleware' => ['auth']], function () {
@@ -31,7 +34,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function 
 
     Route::resources([
         'categories' => 'CategoryController',
-        'products' => 'ProductController'
+        'products' => 'ProductController',
+        'blogs' => 'BlogController'
     ]);
 });
 

@@ -14,17 +14,16 @@
 Auth::routes();
 Route::get('/', 'CustomerController@index');
 Route::get('product/{slug}', 'CustomerController@detailprod');
+Route::get('/blog', 'CustomerController@blog');
 Route::get('blog/{slug}', 'CustomerController@detailblog');
 Route::get('mycart', 'CartController@index');
-Route::get('/blog', 'CustomerController@blog');
 
 
 //CUSTOMER
 Route::group(['middleware' => ['auth']], function () {
     Route::post('mycart', 'CartController@addtocart')->name('mycart.addtocart');
-    Route::delete('mycart/{id}', 'CartController@destroy')->name('mycart.destroy');
     Route::put('mycart/{id}', 'CartController@plusminus')->name('mycart.plusminus');
-    // Route::patch('mycart/{id}', 'CartController@minuscart')->name('mycart.minuscart');
+    Route::delete('mycart/{id}', 'CartController@destroy')->name('mycart.destroy');
 });
 
 //ADMIN

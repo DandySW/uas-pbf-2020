@@ -29,13 +29,6 @@ class CustomerController extends Controller
         return view('customer.single-product', compact('product', 'cart'));
     }
 
-    public function detailblog($slug)
-    {
-        $blog = Blog::where('slug', $slug)->first();
-
-        return view('customer.blog', compact('blog'));
-    }
-
     public function blog()
     {
         $blogs = Blog::all();
@@ -43,4 +36,10 @@ class CustomerController extends Controller
         return view('customer.blog-list', compact('blogs'));
     }
 
+    public function detailblog($slug)
+    {
+        $blog = Blog::where('slug', $slug)->first();
+
+        return view('customer.blog', compact('blog'));
+    }
 }

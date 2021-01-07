@@ -43,7 +43,7 @@ $categories = App\Category::all();
                                                 @endforeach
                                             </ul>
                                         </li>
-                                        <li><a href="{{url('/blogs')}}">Blog</a></li>
+                                        <li><a href="{{url('/blog')}}">Artikel</a></li>
                                     </ul>
                                 </nav>
                             </div>

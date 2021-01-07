@@ -38,8 +38,8 @@
                             @csrf
                             <div class="col-md-12 form-group p_star">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
-                                    name="name" value="{{ old('name') }}" placeholder="Nama" required
-                                    autocomplete="name" autofocus>
+                                    name="name" value="{{ old('name') }}" placeholder="Nama" autocomplete="name"
+                                    autofocus>
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -48,8 +48,7 @@
                             </div>
                             <div class="col-md-12 form-group p_star">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
-                                    name="email" value="{{ old('email') }}" placeholder="E-mail" required
-                                    autocomplete="email">
+                                    name="email" value="{{ old('email') }}" placeholder="E-mail" autocomplete="email">
 
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -58,20 +57,9 @@
                                 @enderror
                             </div>
                             <div class="col-md-12 form-group p_star">
-                                <input id="address" type="text"
-                                    class="form-control @error('address') is-invalid @enderror" name="address"
-                                    value="{{ old('address') }}" placeholder="Alamat" required autocomplete="address"
-                                    autofocus>
-                                @error('address')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                            </div>
-                            <div class="col-md-12 form-group p_star">
                                 <input id="password" type="password"
                                     class="form-control @error('password') is-invalid @enderror" name="password"
-                                    placeholder="Password" required autocomplete="new-password">
+                                    placeholder="Password" autocomplete="new-password">
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>

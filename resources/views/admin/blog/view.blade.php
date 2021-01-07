@@ -31,7 +31,7 @@
                             <th scope="col">No</th>
                             <th scope="col">Judul Artikel</th>
                             <th scope="col">Slug</th>
-                            <th scope="col">Gambar + Deskripsi</th>
+                            <th scope="col">Lihat Artikel</th>
                             <th scope="col">Aksi</th>
                         </tr>
                     </thead>
@@ -42,41 +42,20 @@
                             <td>{{ $blog->title }}</td>
                             <td>{{ $blog->slug }}</td>
                             <td class="text-center">
-                                <button type="button" class="btn btn-primary"><a href="{{url('blog/'.$blog->slug)}}"></a> Lihat
+                                <button type="button" class="btn btn-primary"><a
+                                        href="{{url('blog/'.$blog->slug)}}"></a> Lihat
                                 </button>
                             </td>
                             <td class="text-center">
-                                <a href="{{ route('products.edit', $blog->id) }}" type="button"
+                                <a href="{{ route('blogs.edit', $blog->id) }}" type="button"
                                     class="btn mb-1 btn-rounded btn-info">Edit</a>
                                 <button type="button" class="btn mb-1 btn-rounded btn-danger" data-toggle="modal"
-                                    data-target="#deleteProduct{{ $blog->id }}">Hapus</button>
+                                    data-target="#deleteBlog{{ $blog->id }}">Hapus</button>
                             </td>
                         </tr>
 
-                        <!-- Modal Gambar + Deskripsi -->
-                        <!-- <div class="modal fade" id="imageDescProduct{{ $blog->id }}" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLongTitle">Gambar dan Isi Artikel
-                                        </h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p><img src="{{ asset('storage/'.$blog->image_path) }}"
-                                                alt="{{ $blog->title }}" style="width: 100%"></p>
-                                        <hr>
-                                        <p> {!! $blog->content !!} </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
                         <!-- Modal hapus blog -->
-                        <div class="modal fade" id="deleteProduct{{ $blog->id }}" data-backdrop="static"
+                        <div class="modal fade" id="deleteBlog{{ $blog->id }}" data-backdrop="static"
                             data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                             aria-hidden="true">
                             <div class="modal-dialog">

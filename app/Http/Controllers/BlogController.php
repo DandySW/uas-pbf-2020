@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
 use App\Blog;
+
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -83,7 +83,7 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-        return view('customer.blog-list', compact('blog'));
+        return redirect(url('admin/blogs'))->with('warning', 'Mohon maaf halaman yang anda cari tidak ada');
     }
 
     /**
@@ -106,10 +106,10 @@ class BlogController extends Controller
      */
     public function update(Request $request, Blog $blog)
     {
-        if ($request->title == $product->title) {
+        if ($request->title == $blog->title) {
             $valid_name = 'required|max:100';
         } else {
-            $valid_name = 'required|unique:products|max:100';
+            $valid_name = 'required|unique:blogs|max:100';
         };
         $request->validate(
             [
@@ -121,7 +121,7 @@ class BlogController extends Controller
                 'title.required'     => 'Kolom harus diisi',
                 'title.unique'       => 'Judul Artikel sudah ada, silahkan menggunakan nama lain',
                 'title.max'          => 'Judul maksimal 100 karakter',
-                'description.required'   => 'Kolom harus diisi',
+                'content.required'   => 'Kolom harus diisi',
                 'image.mimetypes'        => 'Hanya dapat memilih gambar',
                 'image.max'              => 'Ukuran gambar maksimal 1MB',
             ]
@@ -129,7 +129,7 @@ class BlogController extends Controller
 
 
         $title = Str::slug($request->title);
-        $slug = 'product' . '-' . date('Ymd') . '_' . $title;
+        $slug = 'blog' . '-' . date('Ymd') . '_' . $title;
         $old_image = $blog->image_path;
 
         if ($request->hasFile('image')) {
@@ -158,7 +158,6 @@ class BlogController extends Controller
             ->update($request->except(['_method', '_token', 'image']));
 
         return redirect(url('admin/blogs'))->with('success', 'Artikel berhasil diubah');
-
     }
 
     /**
@@ -173,5 +172,4 @@ class BlogController extends Controller
         Storage::delete('public/' . $blog->image_path);
         return redirect(url('admin/blogs'))->with('success', 'Artikel berhasil dihapus');
     }
-
 }

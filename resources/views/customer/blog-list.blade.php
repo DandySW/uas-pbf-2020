@@ -18,32 +18,48 @@
 </div>
 <!-- slider Area End-->
 
-<!-- product list part start-->
-<section class="product_list section_padding">
+<!--================Blog Area =================-->
+<section class="blog_area section-padding">
     <div class="container">
         <div class="row">
-            <!-- Nav Card -->
-            <div class="tab-content" id="nav-tabContent">
-                <!-- card one -->
-                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                    <div class="row">
-                        @foreach ($blogs as $blog)
-                        <a href="{{url('blog/'.$blog->slug)}}" class="col-xl-3 col-lg-3 col-md-6">
-                            <div class="single-product mb-60">
-                                <div class="product-img">
-                                    <img src="{{ asset('storage/'.$blog->image_path) }}"
-                                        alt="{{ $blog->title }}" style="width: 100%">
-                                </div>
-                                <div class="product-caption">
-                                    <h4>{{$blog->title}}</h4>
-                                </div>
-                            </div>
-                        </a>
-                        @endforeach
-                    </div>
+            <div class="col-lg-8 mb-5 mb-lg-0">
+                <div class="blog_left_sidebar">
+                    @foreach ($blogs as $blog)
+                    <article class="blog_item">
+                        <div class="blog_item_img">
+                            <img class="card-img rounded-0" src="{{ asset('storage/'.$blog->image_path) }}" alt="">
+                            <a href="{{ url('blog/'.$blog->slug) }}" class="blog_item_date">
+                                <h3>{{ date('d', strtotime($blog->created_at)) }}</h3>
+                                <p>{{ date('M', strtotime($blog->created_at)) }}</p>
+                            </a>
+                        </div>
+
+                        <div class="blog_details">
+                            <a class="d-inline-block" href="{{ url('blog/'.$blog->slug) }}">
+                                <h2>{{ $blog->title }}</h2>
+                            </a>
+                            <p>{!! ReadMoreSpace($blog->content, 500)!!}<a
+                                    href="{{ url('blog/'.$blog->slug) }}">...(baca selengkapnya)</a></p>
+                        </div>
+                    </article>
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
 </section>
+<!--================Blog Area =================-->
 @endsection
+
+<!-- Read More Function -->
+<?php
+function ReadMoreSpace($input, $length)
+{
+    if (strlen($input) <= $length) {
+        return $input;
+    } else {
+        $trimmed_text = substr($input, 0, $length);
+        return $trimmed_text;
+    }
+}
+?>

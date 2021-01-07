@@ -64,9 +64,8 @@ class OrderController extends Controller
             ]);
 
             $product = Product::findOrFail($cart->product_id);
-            $product->update([
-                'stock' => $product->stock - $cart->product_id,
-            ]);
+            $product->stock = $product->stock - $cart->quantity;
+            $product->save();
         };
 
         Cart::where('user_id', Auth::id())->delete();

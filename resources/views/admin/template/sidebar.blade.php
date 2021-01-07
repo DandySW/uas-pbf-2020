@@ -30,13 +30,13 @@
             <li class="nav-label">Artikel</li>
             <li>
                 <a href="{{url('/admin/blogs')}}" aria-activedescendant="false">
-                    <i class="icon-list menu-icon"></i><span class="nav-text">Rekap Artikel</span>
+                    <i class="icon-pencil menu-icon"></i><span class="nav-text">Rekap Artikel</span>
                 </a>
             </li>
             <li class="nav-label">Order</li>
             <li>
                 <a href="{{url('/admin/detailorder')}}" aria-activedescendant="false">
-                    <i class="icon-list menu-icon"></i><span class="nav-text">Rekap Order</span>
+                    <i class="icon-credit-card menu-icon"></i><span class="nav-text">Rekap Order</span>
                 </a>
             </li>
         </ul>

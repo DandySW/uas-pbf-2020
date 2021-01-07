@@ -36,6 +36,7 @@ $categories = App\Category::all();
                                     <ul id="navigation">
                                         <li><a href="{{url('/')}}">Home</a></li>
                                         <li><a href="{{url('/blog')}}">Artikel</a></li>
+                                        <li><a href="{{url('/admin/dashboard')}}">Halaman Admin</a></li>
                                     </ul>
                                 </nav>
                             </div>

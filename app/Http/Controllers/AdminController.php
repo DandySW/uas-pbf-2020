@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Order;
+use App\Order_detail;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -24,7 +25,6 @@ class AdminController extends Controller
     {
         $orders = Order::all();
 
-        return view('admin.view_order', compact('orders'));
+        return view('admin.view_order', compact('orders', 'od'));
     }
-
 }

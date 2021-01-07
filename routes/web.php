@@ -20,10 +20,14 @@ Route::get('mycart', 'CartController@index');
 
 
 //CUSTOMER
-Route::group(['middleware' => ['auth']], function () {
+Route::group(['middleware' => ['auth', 'customer']], function () {
     Route::post('mycart', 'CartController@addtocart')->name('mycart.addtocart');
     Route::put('mycart/{id}', 'CartController@plusminus')->name('mycart.plusminus');
     Route::delete('mycart/{id}', 'CartController@destroy')->name('mycart.destroy');
+
+    Route::get('order-checkout', 'OrderController@checkout');
+    Route::post('docheckout', 'OrderController@docheckout')->name('docheckout');
+    Route::get('order-review', 'OrderController@orderreview');
 });
 
 //ADMIN
@@ -38,12 +42,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function 
     ]);
 });
 
-Route::get('/checkout', function () {
-    return view('customer.checkout');
-});
-Route::get('/confirmation', function () {
-    return view('customer.confirmation');
-});
 Route::get('/riwayat', function () {
     return view('customer.recently');
 });

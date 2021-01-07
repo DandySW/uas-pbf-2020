@@ -42,9 +42,7 @@
                             <td>{{ $blog->title }}</td>
                             <td>{{ $blog->slug }}</td>
                             <td class="text-center">
-                                <button type="button" class="btn btn-primary"><a
-                                        href="{{url('blog/'.$blog->slug)}}"></a> Lihat
-                                </button>
+                                <a href="{{url('blog/'.$blog->slug)}}" class="btn btn-primary" target='_blank'>Lihat</a>
                             </td>
                             <td class="text-center">
                                 <a href="{{ route('blogs.edit', $blog->id) }}" type="button"

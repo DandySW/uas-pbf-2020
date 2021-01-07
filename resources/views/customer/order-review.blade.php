@@ -24,7 +24,8 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="confirmation_tittle">
-          <span>Terima Kasih telah berbelanja. Pesananmu akan segera kami siapkan.</span>
+          <span>Pesanan anda telah kami terima. Pesanan akan segera kami proses begitu pembayaran sudah
+            dikonfirmasi.</span>
         </div>
       </div>
       <div class="col-lg-6 col-lx-4">
@@ -32,13 +33,13 @@
           <h4>Info Pesanan</h4>
           <ul>
             <li>
-              <p>Nama Pemesan</p><span>: Dewi Chantika Maya</span>
+              <p>Nama Pemesan</p><span>: {{ $order->user->name }}</span>
             </li>
             <li>
-              <p>No Handphone</p><span>: 08936353289</span>
+              <p>No Handphone</p><span>: {{ $order->user->phone_number }}</span>
             </li>
             <li>
-              <p>Total Harga</p><span>: Rp 840000</span>
+              <p>Total Harga</p><span>: {{ $order->total }}</span>
             </li>
           </ul>
         </div>
@@ -48,19 +49,13 @@
           <h4>Alamat Pengiriman</h4>
           <ul>
             <li>
-              <p>Provinsit</p><span>: Jawa Timur</span>
+              <p>Provinsi</p><span>: {{ $order->user->city->province->prov_name }}</span>
             </li>
             <li>
-              <p>Kabupaten</p><span>: Situbondo</span>
+              <p>Kabupaten/Kota</p><span>: {{ $order->user->city->city_name }}</span>
             </li>
             <li>
-              <p>Kecamatan</p><span>: Panarukan</span>
-            </li>
-            <li>
-              <p></p>
-            </li>
-            <li>
-              <p>Alamat Rinci</p><span>: Jl.Cempaka II N0.60</span>
+              <p>Alamat </p><span>: {{ $order->user->address }}</span>
             </li>
           </ul>
         </div>
@@ -79,18 +74,20 @@
               </tr>
             </thead>
             <tbody>
+              @foreach ($od as $details)
               <tr>
-                <th colspan="2"><span>NCT Dream Reload Version</span></th>
-                <th>3</th>
-                <th> <span>Rp 840000</span></th>
+                <th colspan="2"><span>{{ $details->product->prod_name }}</span></th>
+                <th>{{ $details->quantity }}</th>
+                <th> <span>{{ @rupiah($details->product->price *  $details->quantity) }}</span></th>
               </tr>
+              @endforeach
             </tbody>
             <tfoot>
               <tr>
                 <th></th>
                 <th></th>
                 <th scope="col">Total</th>
-                <th scope="col" style="color: grey">Rp 840000</th>
+                <th scope="col" style="color: grey">{{ @rupiah($details->order->total) }}</th>
               </tr>
             </tfoot>
           </table>

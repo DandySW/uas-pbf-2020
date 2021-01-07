@@ -20,8 +20,8 @@ class CartController extends Controller
 
         $total_price = 0;
         foreach ($carts as $cart) {
-            $product = Product::findOrFail($cart->product_id);
-            $total_price += ($cart->quantity * $product->price);
+            // $product = Product::findOrFail($cart->product_id);
+            $total_price += ($cart->quantity * $cart->product->price);
         }
 
         return view('customer.cart', compact('carts', 'total_price'));
@@ -42,6 +42,12 @@ class CartController extends Controller
             Cart::create($request->all());
         } else {
             $new_quantity = $cart->quantity + $request->quantity;
+
+            $stock = $cart->product->stock;
+            if ($new_quantity > $stock) {
+                return back()->with('danger', 'Produk dalam keranjang tidak boleh melebihi stock.');
+            }
+
             $cart->update(['quantity' => $new_quantity]);
         };
 

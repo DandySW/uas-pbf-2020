@@ -20,7 +20,7 @@
 
 
 <!--================Single Product Area =================-->
-<div class="product_image_area">>
+<div class="product_image_area">
     <div class="container">
 
         @if (session('success'))
@@ -28,6 +28,13 @@
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                     aria-hidden="true">×</span>
             </button> {{ session('success') }} <a href="{{ url('mycart') }}" class="alert-link">Cek sekarang</a>.</div>
+
+        @endif
+        @if (session('danger'))
+        <div class="alert alert-danger alert-dismissible fade show">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                    aria-hidden="true">×</span>
+            </button> {{ session('danger') }}</div>
         @endif
 
         <div class="row justify-content-center">
@@ -56,13 +63,17 @@
                                 <p>Jumlah</p>
                                 <div class="product_count d-inline-block">
                                     <span class="product_count_item inumber-decrement"> <i class="ti-minus"></i></span>
-                                    <input class="product_count_item input-number" name="quantity" type="text" value="1"
-                                        min="1" max="{{ $product->stock }}" readonly>
+                                    <input class="product_count_item input-number" name="quantity" type="text"
+                                        value="{{ $product->stock - $cart['quantity'] == 0 ? 0 : 1 }}"
+                                        min="{{ $product->stock - $cart['quantity'] == 0 ? 0 : 1 }}"
+                                        max="{{ $product->stock - $cart['quantity'] }}">
                                     <span class="product_count_item number-increment"> <i class="ti-plus"></i></span>
                                 </div>
                             </div>
-                            <div class="add_to_cart" style="text-align: center">
-                                <button type="submit" class="btn_3">Tambah ke dalam Keranjang</button>
+                            @if( $product->stock - $cart['quantity'] != 0)
+                            <div class="add_to_cart" style="text-align: center"> <button type="submit"
+                                    class="btn_3">Tambah ke dalam Keranjang</button></div>
+                            @endif
                         </form>
                     </div>
                 </div>

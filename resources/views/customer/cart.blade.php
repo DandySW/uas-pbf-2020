@@ -28,6 +28,12 @@
       </button> {{ session('success') }}</div>
     @endif
 
+    @error('quantity')
+    <div class="alert alert-danger alert-dismissible fade show">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+      </button> {{ $message }}</div>
+    @enderror
+
     <div class="cart_inner">
       <div class="table-responsive">
         <table class="table">
@@ -73,8 +79,8 @@
                 <form action="{{ route('mycart.plusminus', $cart->id) }}" method="post" class="d-inline">
                   @method('put')
                   @csrf
-                  <input type="hidden" name="quantity" value="plus">
-                  <button type=" submit" class="genric-btn default col-3"><i class="fa fa-plus"></i></button>
+                  <input type="hidden" name="quantity" value="minus">
+                  <button type=" submit" class="genric-btn default col-3"><i class="fa fa-minus"></i></button>
                 </form>
                 <div class="genric-btn default-border col-3">
                   {{$cart->quantity}}
@@ -82,8 +88,8 @@
                 <form action="{{ route('mycart.plusminus', $cart->id) }}" method="post" class="d-inline">
                   @method('put')
                   @csrf
-                  <input type="hidden" name="quantity" value="minus">
-                  <button type=" submit" class="genric-btn default col-3"><i class="fa fa-minus"></i></button>
+                  <input type="hidden" name="quantity" value="plus">
+                  <button type=" submit" class="genric-btn default col-3"><i class="fa fa-plus"></i></button>
                 </form>
               </td>
               <td>

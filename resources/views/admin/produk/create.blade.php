@@ -41,7 +41,9 @@
                                                     id="inlineFormCustomSelect">
                                                     <option selected value="">Pilih Kategori</option>
                                                     @foreach ($categories as $category)
-                                                    <option value="{{ $category->id }}">{{ $category->cat_name }}
+                                                    <option value="{{ $category->id }}"
+                                                        {{ old('category_id') == $category->id ? "selected":"" }}>
+                                                        {{ $category->cat_name }}
                                                     </option>
                                                     @endforeach
                                                 </select>

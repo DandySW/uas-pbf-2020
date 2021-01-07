@@ -59,10 +59,13 @@ class CartController extends Controller
     public function plusminus(Request $request, $id)
     {
         $cart = Cart::findOrFail($id);
-        if ($cart->quantity < $request->quantity) {
+
+        if ($request->quantity == 'plus') {
+            $request['quantity'] = $cart->quantity + 1;
             $cart->update(['quantity' => $request->quantity]);
             return redirect(url('mycart'))->with('success', 'Jumlah produk berhasil ditambah.');
         } else {
+            $request['quantity'] = $cart->quantity - 1;
             $cart->update(['quantity' => $request->quantity]);
             return redirect(url('mycart'))->with('success', 'Jumlah produk berhasil dikurangi.');
         };

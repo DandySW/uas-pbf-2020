@@ -73,7 +73,7 @@
                 <form action="{{ route('mycart.plusminus', $cart->id) }}" method="post" class="d-inline">
                   @method('put')
                   @csrf
-                  <input type="hidden" name="quantity" value="{{ $cart->quantity + 1 }}"">
+                  <input type="hidden" name="quantity" value="plus">
                   <button type=" submit" class="genric-btn default col-3"><i class="fa fa-plus"></i></button>
                 </form>
                 <div class="genric-btn default-border col-3">
@@ -82,7 +82,7 @@
                 <form action="{{ route('mycart.plusminus', $cart->id) }}" method="post" class="d-inline">
                   @method('put')
                   @csrf
-                  <input type="hidden" name="quantity" value="{{ $cart->quantity - 1 }}"">
+                  <input type="hidden" name="quantity" value="minus">
                   <button type=" submit" class="genric-btn default col-3"><i class="fa fa-minus"></i></button>
                 </form>
               </td>

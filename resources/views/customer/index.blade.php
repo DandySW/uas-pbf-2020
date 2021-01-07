@@ -21,7 +21,8 @@
                                     {{ Date('Y') }}!</p>
                                 <!-- Hero-btn -->
                                 <div class="hero__btn" data-animation="fadeInRight" data-delay="1s">
-                                    <a href="#products" class="btn hero-btn" id="products">Shop Now</a>
+                                    <a href="#products" class="btn hero-btn" id="products">Shop
+                                        Now</a>
                                 </div>
                             </div>
                         </div>

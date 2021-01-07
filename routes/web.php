@@ -19,6 +19,8 @@ Route::get('blog/{slug}', 'CustomerController@detailblog');
 Route::get('mycart', 'CartController@index');
 
 
+
+
 //CUSTOMER
 Route::group(['middleware' => ['auth', 'customer']], function () {
     Route::post('mycart', 'CartController@addtocart')->name('mycart.addtocart');
@@ -34,6 +36,8 @@ Route::group(['middleware' => ['auth', 'customer']], function () {
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function () {
     Route::get('dashboard', 'AdminController@index');
     Route::get('view-customers', 'AdminController@customers');
+    Route::get('detailorder', 'AdminController@order');
+
 
     Route::resources([
         'categories' => 'CategoryController',
@@ -42,6 +46,3 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function 
     ]);
 });
 
-Route::get('/riwayat', function () {
-    return view('customer.recently');
-});

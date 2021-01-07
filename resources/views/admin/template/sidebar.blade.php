@@ -33,6 +33,12 @@
                     <i class="icon-list menu-icon"></i><span class="nav-text">Rekap Artikel</span>
                 </a>
             </li>
+            <li class="nav-label">Order</li>
+            <li>
+                <a href="{{url('/admin/detailorder')}}" aria-activedescendant="false">
+                    <i class="icon-list menu-icon"></i><span class="nav-text">Rekap Order</span>
+                </a>
+            </li>
         </ul>
     </div>
 </div>

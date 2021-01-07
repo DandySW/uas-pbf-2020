@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Order;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -18,4 +19,12 @@ class AdminController extends Controller
 
         return view('admin.view_customers', compact('users'));
     }
+
+    public function order()
+    {
+        $orders = Order::all();
+
+        return view('admin.view_order', compact('orders'));
+    }
+
 }

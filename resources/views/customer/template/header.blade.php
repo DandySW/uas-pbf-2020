@@ -35,14 +35,6 @@ $categories = App\Category::all();
                                 <nav>
                                     <ul id="navigation">
                                         <li><a href="{{url('/')}}">Home</a></li>
-                                        <li>
-                                            <a href="#">Kategori</a>
-                                            <ul class="submenu">
-                                                @foreach ($categories as $category)
-                                                <li><a href="{{ url('#') }}">{{ $category->cat_name }}</a></li>
-                                                @endforeach
-                                            </ul>
-                                        </li>
                                         <li><a href="{{url('/blog')}}">Artikel</a></li>
                                     </ul>
                                 </nav>
